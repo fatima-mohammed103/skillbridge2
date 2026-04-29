@@ -1,0 +1,220 @@
+
+
+   
+        /* المتغيرات العامة للألوان */
+        :root {
+            --bg-color: #f0f4f8;
+            --sidebar-bg: #ffffff;
+            --primary-teal: #075e94;
+            --text-main: #075e94;
+            --text-muted: #718096;
+            --card-bg: #ffffff;
+            --border-color: #edf2f7;
+        }
+        main {
+            margin-top: 50px;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            /* إضافة خاصية التوسيط */
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+/* main{   display: flex;
+            justify-content: center;  align-items: center;} */
+        /* حاوية المحتوى الرئيسي - تم تعديلها لتكون في المنتصف */
+        .main-content {
+            width: 100%;
+            max-width: 1100px; /* تحديد عرض أقصى لضمان الشكل الجمالي في المنتصف */
+            padding: 10px;
+        }
+
+        /* الكروت */
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            margin-bottom: 25px;
+        }
+
+        .card h2, .card h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: #1a202c;
+        }
+
+        /* كارت البروفايل */
+        .profile-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-info {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            margin-top: 10px;
+        }
+
+        .profile-img-container img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--primary-teal);
+            padding: 3px;
+        }
+
+        .profile-details h1 {
+            margin: 0;
+            font-size: 1.6rem;
+        }
+
+        .profile-details p {
+            margin: 5px 0 15px 0;
+            color: var(--text-muted);
+        }
+
+        .btn-edit {
+            background: transparent;
+            border: 1px solid #cbd5e0;
+            padding: 8px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .btn-edit:hover {
+            background: #f7fafc;
+        }
+
+        /* تقسيم الشبكة (Grid) للمشاريع والمواهب */
+        .bottom-grid {
+            display: grid;
+            grid-template-columns: 1.8fr 1fr;
+            gap: 25px;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        /* الجدول */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th {
+            text-align: left;
+            padding-bottom: 15px;
+            color: var(--text-muted);
+            font-weight: 500;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        td {
+            padding: 20px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .project-title strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .project-title small {
+            color: var(--text-muted);
+        }
+
+        .btn-view {
+            border: 1px solid var(--primary-teal);
+            background: transparent;
+            color: var(--primary-teal);
+            padding: 6px 14px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: 0.3s;
+        }
+
+        .btn-view:hover {
+            background: var(--primary-teal);
+            color: white;
+        }
+
+        /* كروت المواهب */
+        .talent-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .talent-item {
+            display: flex;
+            gap: 15px;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            align-items: flex-start;
+        }
+
+        .talent-avatar {
+            width: 55px;
+            height: 55px;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+
+        .talent-info {
+            flex: 1;
+        }
+
+        .talent-info h4 {
+            margin: 0 0 5px 0;
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .active-tag {
+            color: var(--primary-teal);
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+
+        .talent-info p {
+            margin: 3px 0;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .btn-profile {
+            width: 100%;
+            margin-top: 10px;
+            background: var(--primary-teal);
+            color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.85rem;
+        }
+
+        .rating {
+            color: #ecc94b;
+        }
+
+        /* استجابة الشاشات الصغيرة */
+        @media (max-width: 800px) {
+            .bottom-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+  

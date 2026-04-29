@@ -1,0 +1,333 @@
+g: #ffffff;
+  --text-dark: #142766;
+  --text-muted: gray;
+  /* Pastel Gradients */
+  --grad-blue: linear-gradient(135deg, #eef6ff, #d4e6ff);
+  --grad-green: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  --grad-purple: linear-gradient(135deg, #f3e5f5, #e1bee7);
+  --grad-yellow: linear-gradient(135deg, #fdf8e2, #f5ebb5);
+  --grad-pink: linear-gradient(135deg, #fce4ec, #f8bbd0);
+  /* Icon Colors */
+  --icon-blue: #8d774a;
+  --icon-green: #388e3c;
+  --icon-purple: #7b1fa2;
+  --icon-yellow: #fbc02d;
+}
+.custom-btn {
+  background-color: #075e94;
+  color: #ffffff;
+}
+.custom-btn:hover {
+  background-color: #142766;
+  border-color: #142766;
+  color: #fff;
+}
+body {
+  background-color: var(--bg-color);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-dark);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 70px;
+}
+/* 1. Navbar */
+.custom-navbar {
+  background-color: #8d774a;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.brand-icon {
+  color: #142766;
+  margin-right: 8px;
+}
+.navbar-brand {
+  color: #142766 !important;
+}
+.nav-link {
+  color: #142766 !important;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+.nav-link:hover,
+.nav-link.active {
+  color: #ffffff !important;
+}
+/* Base Card Style */
+.modern-card {
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  background-color: var(--card-bg);
+  overflow: hidden;
+}
+.modern-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+.section-title {
+  color: #075e94;
+  font-size: 1.15rem;
+}
+.cubtnstom- {
+  background-color: #075e94;
+  color: #fff;
+}
+.cubtnstom- a {
+  text-decoration: none;
+  color: inherit; /* عشان ياخد لون الزر */
+}
+/* 2. Stats Cards */
+.stat-card {
+  border: none;
+  border-radius: 20px;
+  transition: transform 0.3s ease;
+  padding: 10px;
+}
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+.card-pastel-blue {
+  background: var(--grad-blue);
+}
+.card-pastel-green {
+  background: var(--grad-green);
+}
+.card-pastel-purple {
+  background: var(--grad-purple);
+}
+.card-pastel-yellow {
+  background: var(--grad-yellow);
+}
+.icon-circle {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+.bg-light-blue {
+  background-color: #eef6ff;
+  color: var(--icon-blue);
+}
+.bg-light-green {
+  background-color: rgba(56, 142, 60, 0.15);
+  color: var(--icon-green);
+}
+.bg-light-purple {
+  background-color: rgba(123, 31, 162, 0.15);
+  color: var(--icon-purple);
+}
+.bg-light-yellow {
+  background-color: rgba(251, 192, 45, 0.15);
+  color: var(--icon-yellow);
+}
+.stat-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.45);
+  letter-spacing: 0.5px;
+}
+.stat-value {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.75);
+}
+/* Profiles */
+.avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+/* 3. Team Status Lists */
+.status-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+.status-item:last-child {
+  border-bottom: none;
+}
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 6px;
+}
+.dot-working {
+  background-color: #81c784;
+}
+/* Pastel Green */
+.dot-available {
+  background-color: #64b5f6;
+}
+/* Pastel Blue */
+.dot-leave {
+  background-color: #ffb74d;
+}
+/* Pastel Orange */
+/* 5. Projects Table & Progress */
+.table-borderless th {
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.table td {
+  vertical-align: middle;
+}
+.progress {
+  height: 8px;
+  border-radius: 10px;
+  background-color: #f1f3f5;
+}
+.progress-bar {
+  border-radius: 10px;
+}
+.bg-pastel-blue {
+  background-color: #90caf9 !important;
+}
+.bg-pastel-green {
+  background-color: #a5d6a7 !important;
+}
+.bg-pastel-purple {
+  background-color: #ce93d8 !important;
+}
+.badge-soft-success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  font-weight: 600;
+}
+.badge-soft-warning {
+  background-color: #fff8e1;
+  color: #f57f17;
+  font-weight: 600;
+}
+/* 6. Top Members */
+.member-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-radius: 12px;
+  transition: background-color 0.2s;
+}
+.member-list-item:hover {
+  background-color: #f8fbff;
+}
+/* 7. Timeline */
+.timeline {
+  position: relative;
+  padding-left: 20px;
+  margin-top: 10px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #e3e8ee;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 25px;
+}
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -21px;
+  top: 5px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #64b5f6;
+  border: 2px solid white;
+  z-index: 1;
+}
+.timeline-date {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.timeline-content {
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+/* 8. Footer */
+.custom-footer {
+  background-color: #ffffff;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+.footer-link {
+  color: gray;
+  text-decoration: none;
+  margin: 0 12px;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.footer-link:hover {
+  color: #8d774a;
+}
+.social-icons a {
+  color: gray;
+  font-size: 1.2rem;
+  margin: 0 8px;
+  transition:
+    color 0.3s,
+    transform 0.3s;
+  display: inline-block;
+}
+.social-icons a:hover {
+  color: #8d774a;
+  transform: translateY(-3px);
+}
+/* Ultimate Dropdown Fix for Mobile */
+@media (max-width: 991px) {
+  .dropdown-menu {
+    position: absolute !important;
+    right: 0 !important;
+    left: auto !important;
+    transform: none !important;
+    width: 300px !important;
+    max-width: 90vw !important;
+    top: 100% !important;
+    margin-top: 10px !important;
+  }
+}
+@media (max-width: 768px){
+   .cubtnstom-{
+    font-size: 12px ;
+    display: flex;
+  justify-content: center;
+  align-items: center;  
+  }
+}
+@media (max-width: 576px){
+   .cubtnstom-{
+    font-size: 7px ;
+    display: flex;
+  justify-content: center;
+  align-items: center;  
+  }
+  .sub-title {
+    font-size: 13px;
+  }
+}
+css dashdored for team
+

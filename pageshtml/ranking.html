@@ -1,0 +1,476 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge</title>
+
+  <link rel="stylesheet" href="../csspags/style.css">
+  <script src="https://kit.fontawesome.com/ca825dfbdd.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../csspags/ranking.css">
+</head>
+
+<body>
+<div class="parent-container">
+
+<nav class="main-nav">
+  <div class="nav-container">
+      
+    <div class="nav-left">
+      <button class="menu-btn" onclick="openMenu()">☰</button>
+ <a href="../index.html" class="brand"><img src="/imags/download.png" alt="" style="width: 210px;"></a>
+        
+
+    <ul class="nav-links">
+      <li><a href="#freelancers"id="">Find Freelancer</a></li>
+      <li><a href="/pageshtml/create.html">Explore Projects</a></li>
+      <li><a href="/pageshtml/dashbord.html">Dashborad</a></li>
+      <li class="dropdown">
+        <a href="#" id="link-more" >More ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/pageshtml/profile.html">Profile</a></li>
+          <li><a href="/pageshtml/ranking.html">Ranking</a></li>
+          <li><a href="/pageshtml/pageteam.html"> Team Page</a></li>
+          <li><a href="/pageshtml/loction.html">Loction</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div> 
+    <div class="nav-right">
+      <!-- <div class="search-box">
+        <input type="search" placeholder="Search a talent..." class="search-input" />
+        <button class="search-icon">🔍</button>
+      </div>
+       -->
+    <button class="lang-btn lang-btn-desktop" onclick="toggleLanguage()">AR</button>
+<!-- 
+      <div class="auth-buttons">
+        <a class="login">Log In</a> -->
+        
+        <a class="nav-signup-btn" href="signup.html">Sign Up</a>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+  <div id="overlay" onclick="closeMenu()"></div>
+
+  <div id="sideMenu">
+    <div class="side-header">
+      <a href="../index.html" class="side-brand">
+        <img src="/imags/download.png" alt="Logo">
+      </a>
+      <button class="close-btn" onclick="closeMenu()"><i class="fa-solid fa-x" style="color: #075e94;"></i></button>
+    </div>
+    
+    <div class="side-links">
+      <a href="#freelancers"><i class="fa-solid fa-magnifying-glass" style="font-size: 15px;"></i> <span class="txt-find">Find Freelancer</span></a>
+      <a href="/pageshtml/profile.html"><i class="fa-solid fa-briefcase"style="font-size: 15px;" ></i> <span class="txt-work">Profile</span></a>
+      <a href="/pageshtml/create.html"><i class="fa-solid fa-users" style="font-size: 15px;"></i> <span class="txt-team">Explore Projects</span></a></a>
+      <a href="/pageshtml/pageteam.html"><i class="fa-solid fa-users" style="font-size: 15px;"></i> <span class="txt-team">Team Page</span></a>
+      <a href="/pageshtml/dashbord.html"><i class="fas fa-chart-line"></i><span class="txt-team">Dashborad</span></a>
+      <a href="/pageshtml/ranking.html"> <i class="fas fa-podium"></i><span class="txt-team">Ranking</span></a>
+      <a href="/pageshtml/loction.html"><i class="fas fa-map-marked-alt"></i><span class="txt-team">Loction</span></a>
+      <hr>
+      <a href="#" class="lang-btn" onclick="toggleLanguage()">
+        <i class="fa-solid fa-globe" style="font-size: 15px;"></i> <span class="txt-lang-toggle">Language: English</span>
+      </a>
+    </div>
+
+    <div class="side-auth">
+      <a href="#" class="side-login">Log In</a>
+      <a href="signup.html" class="side-signup" style="color: white;">Sign Up</a>
+    </div>
+  </div>
+</div> 
+
+
+<section class="ranking">
+<div class="container">
+    <h2 class="mb-4">Leaderboard</h2>
+    <div class="timing d-flex justify-content-between align-items-center">
+      <ul class="d-flex time-filters m-0 align-items-center">
+        <li class="time-filter" data-time="weekly">Weekly</li>
+        <li class="time-filter" data-time="monthly">Monthly</li>
+        <li class="time-filter active" data-time="all">All time</li>
+      </ul>
+      <div class="dropdown">
+        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" id="roleFilterBtn">
+          Filter
+        </button>
+        <ul class="dropdown-menu filter" id="roleFilterMenu">
+          <li><a class="dropdown-item" href="#" data-role="all">All Developers</a></li>
+          <li><a class="dropdown-item" href="#" data-role="full stack">FULL Stack</a></li>
+          <li><a class="dropdown-item" href="#" data-role="frontend">Front-End</a></li>
+          <li><a class="dropdown-item" href="#" data-role="backend">Back-End</a></li>
+          <li><a class="dropdown-item" href="#" data-role="ui-ux">UI-UX</a></li>
+          <li><a class="dropdown-item" href="#" data-role="graphic designer">Graphic Designer</a></li>
+          <li><a class="dropdown-item" href="#" data-role="software engineer">Software Engineer</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="your-rank-card d-flex align-items-center justify-content-between">
+      <h3><i class="fa-solid fa-ranking-star"></i> Your Rank</h3>
+      <div class="rank-info">
+        <span class="rank-number">#17</span>
+        <span class="rank-xp">12 projects</span>
+      </div>
+    </div>
+    <div class="leaderboard-wrapper">
+      <div class="user-card d-flex align-items-center mb-3 p-3">
+        <span class="rank-number">1</span>
+        <span class="rank1"> <i class="fa-solid fa-medal"></i> </span>
+        <img src="images/150 (5).jpg" class="user-avatar rounded-circle mx-3" alt="DevHunter" />
+        <div class="user-details flex-grow-1">
+          <h4 class="user-name mb-0">DevHunter</h4>
+          <p class="user-role text-muted mb-2">Frontend Engineer</p>
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <a href="#" class="btn btn-sm btn-outline-primary"
+              style="margin: 0; border-radius: 20px; font-size: 12px; padding: 4px 12px; color: #142766; border-color: #142766; background-color: transparent;"
+              onmouseover="this.style.backgroundColor='#142766'; this.style.color='#fff';"
+              onmouseout="this.style.backgroundColor='transparent'; this.style.color='#142766';">View Profile</a>
+          </div>
+          <div class="custom-progress-container">
+            <div class="custom-progress-bar" style="width: 95%">95%</div>
+          </div>
+        </div>
+        <span class="user-points ml-3">35 projects</span>
+      </div>
+      <div class="user-card d-flex align-items-center mb-3 p-3">
+        <span class="rank-number">2</span>
+        <span class="rank2"> <i class="fa-solid fa-medal"></i> </span>
+        <img src="https://i.pravatar.cc/150?img=12" class="user-avatar rounded-circle mx-3" alt="Mohamed Ali" />
+        <div class="user-details flex-grow-1">
+          <h4 class="user-name mb-0">Mohamed Ali</h4>
+          <p class="user-role text-muted mb-2">Backend Engineer</p>
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <a href="#" class="btn btn-sm btn-outline-primary"
+              style="margin: 0; border-radius: 20px; font-size: 12px; padding: 4px 12px; color: #142766; border-color: #142766; background-color: transparent;"
+              onmouseover="this.style.backgroundColor='#142766'; this.style.color='#fff';"
+              onmouseout="this.style.backgroundColor='transparent'; this.style.color='#142766';">View Profile</a>
+          </div>
+          <div class="custom-progress-container">
+            <div class="custom-progress-bar" style="width: 85%">85%</div>
+          </div>
+        </div>
+        <span class="user-points ml-3">31 projects</span>
+      </div>
+      <div class="user-card d-flex align-items-center mb-3 p-3">
+        <span class="rank-number">3</span>
+        <span class="rank3"> <i class="fa-solid fa-medal"></i> </span>
+        <img src="https://i.pravatar.cc/150?img=8" class="user-avatar rounded-circle mx-3" alt="Ahmed Fouad" />
+        <div class="user-details flex-grow-1">
+          <h4 class="user-name mb-0">Omar Khaled</h4>
+          <p class="user-role text-muted mb-2">Full Stack Engineer</p>
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <a href="#" class="btn btn-sm btn-outline-primary"
+              style="margin: 0; border-radius: 20px; font-size: 12px; padding: 4px 12px; color: #142766; border-color: #142766; background-color: transparent;"
+              onmouseover="this.style.backgroundColor='#142766'; this.style.color='#fff';"
+              onmouseout="this.style.backgroundColor='transparent'; this.style.color='#142766';">View Profile</a>
+          </div>
+          <div class="custom-progress-container">
+            <div class="custom-progress-bar" style="width: 80%">80%</div>
+          </div>
+        </div>
+        <span class="user-points ml-3">29 projects</span>
+      </div>
+      <div class="user-card d-flex align-items-center mb-3 p-3">
+        <span class="rank-number">4</span>
+        <img src="https://i.pravatar.cc/150?img=33" class="user-avatar rounded-circle mx-3" alt="Ahmed Fouad" />
+        <div class="user-details flex-grow-1">
+          <h4 class="user-name mb-0">Tarek Hassan</h4>
+          <p class="user-role text-muted mb-2">UI-UX Designer</p>
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <a href="#" class="btn btn-sm btn-outline-primary"
+              style="margin: 0; border-radius: 20px; font-size: 12px; padding: 4px 12px; color: #142766; border-color: #142766; background-color: transparent;"
+              onmouseover="this.style.backgroundColor='#142766'; this.style.color='#fff';"
+              onmouseout="this.style.backgroundColor='transparent'; this.style.color='#142766';">View Profile</a>
+          </div>
+          <div class="custom-progress-container">
+            <div class="custom-progress-bar" style="width: 75%">75%</div>
+          </div>
+        </div>
+        <span class="user-points ml-3">25 projects</span>
+      </div>
+      <div class="user-card d-flex align-items-center mb-3 p-3">
+        <span class="rank-number">5</span>
+        <img src="https://i.pinimg.com/736x/5b/10/e8/5b10e8f625506e6725bc58f8d27ef268.jpg"
+          class="user-avatar rounded-circle mx-3" alt="Ahmed Fouad" />
+        <div class="user-details flex-grow-1">
+          <h4 class="user-name mb-0">Karim Youssef</h4>
+          <p class="user-role text-muted mb-2">Graphic Designer</p>
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <a href="#" class="btn btn-sm btn-outline-primary"
+              style="margin: 0; border-radius: 20px; font-size: 12px; padding: 4px 12px; color: #142766; border-color: #142766; background-color: transparent;"
+              onmouseover="this.style.backgroundColor='#142766'; this.style.color='#fff';"
+              onmouseout="this.style.backgroundColor='transparent'; this.style.color='#142766';">View Profile</a>
+          </div>
+          <div class="custom-progress-container">
+            <div class="custom-progress-bar" style="width: 71%">71%</div>
+          </div>
+        </div>
+        <span class="user-points ml-3">27 projects</span>
+      </div>
+      <div class="user-card d-flex align-items-center mb-3 p-3">
+        <span class="rank-number">6</span>
+        <img src="https://i.pravatar.cc/150?img=5" class="user-avatar rounded-circle mx-3" alt="Ahmed Fouad" />
+        <div class="user-details flex-grow-1">
+          <h4 class="user-name mb-0">Sara Ahmed</h4>
+          <p class="user-role text-muted mb-2">Backend Engineer</p>
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <a href="#" class="btn btn-sm btn-outline-primary"
+              style="margin: 0; border-radius: 20px; font-size: 12px; padding: 4px 12px; color: #142766; border-color: #142766; background-color: transparent;"
+              onmouseover="this.style.backgroundColor='#142766'; this.style.color='#fff';"
+              onmouseout="this.style.backgroundColor='transparent'; this.style.color='#142766';">View Profile</a>
+          </div>
+          <div class="custom-progress-container">
+            <div class="custom-progress-bar" style="width: 60%">60%</div>
+          </div>
+        </div>
+        <span class="user-points ml-3">23 projects</span>
+      </div>
+      <div class="user-card d-flex align-items-center mb-3 p-3">
+        <span class="rank-number">7</span>
+        <img src="https://i.pinimg.com/736x/fa/c8/0b/fac80b645fb31d0277be94cf505ab4dc.jpg"
+          class="user-avatar rounded-circle mx-3" alt="Ahmed Fouad" />
+        <div class="user-details flex-grow-1">
+          <h4 class="user-name mb-0">Huda Samir</h4>
+          <p class="user-role text-muted mb-2">Software Engineer</p>
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <a href="#" class="btn btn-sm btn-outline-primary"
+              style="margin: 0; border-radius: 20px; font-size: 12px; padding: 4px 12px; color: #142766; border-color: #142766; background-color: transparent;"
+              onmouseover="this.style.backgroundColor='#142766'; this.style.color='#fff';"
+              onmouseout="this.style.backgroundColor='transparent'; this.style.color='#142766';">View Profile</a>
+          </div>
+          <div class="custom-progress-container">
+            <div class="custom-progress-bar" style="width: 55%">55%</div>
+          </div>
+        </div>
+        <span class="user-points ml-3">21 projects</span>
+      </div>
+      <div class="user-card d-flex align-items-center mb-3 p-3">
+        <span class="rank-number">8</span>
+        <img src="https://i.pinimg.com/736x/a6/3b/2d/a63b2da8155bb43a21d39d70cea15c86.jpg"
+          class="user-avatar rounded-circle mx-3" alt="Ahmed Fouad" />
+        <div class="user-details flex-grow-1">
+          <h4 class="user-name mb-0">Omar Ahmed</h4>
+          <p class="user-role text-muted mb-2">UI-UX Designer</p>
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <a href="#" class="btn btn-sm btn-outline-primary"
+              style="margin: 0; border-radius: 20px; font-size: 12px; padding: 4px 12px; color: #142766; border-color: #142766; background-color: transparent;"
+              onmouseover="this.style.backgroundColor='#142766'; this.style.color='#fff';"
+              onmouseout="this.style.backgroundColor='transparent'; this.style.color='#142766';">View Profile</a>
+          </div>
+          <div class="custom-progress-container">
+            <div class="custom-progress-bar" style="width: 52%">52%</div>
+          </div>
+        </div>
+        <span class="user-points ml-3">20 projects</span>
+      </div>
+      <div class="user-card d-flex align-items-center mb-3 p-3">
+        <span class="rank-number">9</span>
+        <img src="https://i.pinimg.com/736x/61/25/45/612545f9b3caf96b9e9bc7779aeb91a0.jpg"
+          class="user-avatar rounded-circle mx-3" alt="Nour Ibrahim" />
+        <div class="user-details flex-grow-1">
+          <h4 class="user-name mb-0">Nour Ibrahim</h4>
+          <p class="user-role text-muted mb-2">Backend Engineer</p>
+          <div class=" d-flex align-items-center gap-3 mb-2">
+            <a href="#" class=" view-profile-btn btn btn-sm btn-outline-primary"
+              onmouseover="this.style.backgroundColor='#142766'; this.style.color='#fff';"
+              onmouseout="this.style.backgroundColor='transparent'; this.style.color='#142766';">View Profile</a>
+          </div>
+          <div class="custom-progress-container">
+            <div class="custom-progress-bar" style="width: 50%">50%</div>
+          </div>
+        </div>
+        <span class="user-points ml-3">19 projects</span>
+      </div>
+      <div class="user-card d-flex align-items-center mb-3 p-3">
+        <span class="rank-number">10</span>
+        <img src="https://i.pinimg.com/1200x/14/c3/b7/14c3b70570cffff5327a44a84c39da9e.jpg"
+          class="user-avatar rounded-circle mx-3" alt="Ahmed Fouad" />
+        <div class="user-details flex-grow-1">
+          <h4 class="user-name mb-0">Aya Khaled</h4>
+          <p class="user-role text-muted mb-2">Frontend Engineer</p>
+          <div class="d-flex align-items-center gap-3 mb-2">
+            <a href="#" class="btn btn-sm btn-outline-primary"
+              style="margin: 0; border-radius: 20px; font-size: 12px; padding: 4px 12px; color: #142766; border-color: #142766; background-color: transparent;"
+              onmouseover="this.style.backgroundColor='#142766'; this.style.color='#fff';"
+              onmouseout="this.style.backgroundColor='transparent'; this.style.color='#142766';">View Profile</a>
+          </div>
+          <div class="custom-progress-container">
+            <div class="custom-progress-bar" style="width: 45%">45%</div>
+          </div>
+        </div>
+        <span class="user-points ml-3">17 projects</span>
+      </div>
+    </div>
+  </div>
+  
+</section>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button class="chat-btn" onclick="toggleChat()">
+         <i class="fa-solid fa-robot" style="color:#e1b055;"></i>
+        
+    </button>
+
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <div class="user-info">
+                <div class="avatar">AI</div>
+                <div>
+                    <h4>SkillBridge Assistant</h4>
+                    <small>Online | Ready to help</small>
+                </div>
+            </div>
+            <button class="close-btn" onclick="toggleChat()">&times;</button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                Welcome to SkillBridge! Are you looking for talented graduates or starting your freelance journey?
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type your message here...">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+<script>
+function openMenu() {
+    document.getElementById("sideMenu").classList.add("active");
+    document.getElementById("overlay").classList.add("active");
+  }
+
+  function closeMenu() {
+    document.getElementById("sideMenu").classList.remove("active");
+    document.getElementById("overlay").classList.remove("active");
+
+  }
+/////////////////////////////////
+
+function toggleLanguage() {
+    const html = document.documentElement;
+    const isEn = html.getAttribute('lang') === 'en';
+    
+    if (isEn) {
+        html.setAttribute('lang', 'ar');
+        html.setAttribute('dir', 'rtl');
+        updateContent('ar');
+    } else {
+        html.setAttribute('lang', 'en');
+        html.setAttribute('dir', 'ltr');
+        updateContent('en');
+    }
+}
+
+function updateContent(lang) {
+    const data = {
+        'en': {
+            'find': 'Find Freelancer',
+            'team': 'Team Page',
+            'dash': 'Dashboard',
+            'more': 'More ▾',
+            'signup': 'Sign Up',
+            'login': 'Log In',
+            'langBtn': 'AR',
+            'langToggle': 'Language: English'
+        },
+        'ar': {
+            'find': 'ابحث عن مستقل',
+            'team': 'صفحة الفريق',
+            'dash': 'لوحة التحكم',
+            'more': 'المزيد ▾',
+            'signup': 'إنشاء حساب',
+            'login': 'دخول',
+            'langBtn': 'EN',
+            'langToggle': 'اللغة: العربية'
+        }
+    };
+
+    document.getElementById('link-find').innerText = data[lang].find;
+    document.getElementById('link-team').innerText = data[lang].team;
+    document.getElementById('link-dash').innerText = data[lang].dash;
+    document.getElementById('link-more').innerText = data[lang].more;
+    
+    // أزرار الحساب
+    document.querySelector('.nav-signup-btn').innerText = data[lang].signup;
+    document.querySelector('.side-signup').innerText = data[lang].signup;
+    document.querySelector('.side-login').innerText = data[lang].login;
+
+    // أزرار اللغة
+    document.querySelector('.lang-btn-desktop').innerText = data[lang].langBtn;
+    document.querySelector('.txt-lang-toggle').innerText = data[lang].langToggle;
+    
+    closeMenu();
+}</script>
+<script src="../js/script.js"></script>
+     <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

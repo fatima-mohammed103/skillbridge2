@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choice</title>
+    <script src="https://kit.fontawesome.com/ca825dfbdd.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="choiceStyle.css">
+<link rel="stylesheet" href="../csspags/">
+<link rel="stylesheet" href="../csspags/style.css">
+
+
+</head>
+<body>
+     <!-- satart of Header -->
+    <div class="parent-container">
+
+<nav class="main-nav">
+  <div class="nav-container">
+      
+    <div class="nav-left">
+      <button class="menu-btn" onclick="openMenu()">☰</button>
+ <a href="../index.html" class="brand"><img src="/imags/download.png" alt="" style="width: 210px;"></a>
+        
+
+    <ul class="nav-links">
+      <li><a href="#freelancers"id="">Find Freelancer</a></li>
+      <li><a href="/pageshtml/create.html">Explore Projects</a></li>
+      <li><a href="/pageshtml/dashbord.html">Dashborad</a></li>
+      <li class="dropdown">
+        <a href="#" id="link-more" >More ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/pageshtml/profile.html">Profile</a></li>
+          <li><a href="/pageshtml/ranking.html">Ranking</a></li>
+          <li><a href="/pageshtml/pageteam.html"> Team Page</a></li>
+          <li><a href="/pageshtml/loction.html">Loction</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div> 
+    <div class="nav-right">
+      <!-- <div class="search-box">
+        <input type="search" placeholder="Search a talent..." class="search-input" />
+        <button class="search-icon">🔍</button>
+      </div>
+       -->
+    <button class="lang-btn lang-btn-desktop" onclick="toggleLanguage()">AR</button>
+<!-- 
+      <div class="auth-buttons">
+        <a class="login">Log In</a> -->
+        
+        <a class="nav-signup-btn" href="signup.html">Sign Up</a>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+  <div id="overlay" onclick="closeMenu()"></div>
+
+  <div id="sideMenu">
+    <div class="side-header">
+      <a href="../index.html" class="side-brand">
+        <img src="/imags/download.png" alt="Logo">
+      </a>
+      <button class="close-btn" onclick="closeMenu()"><i class="fa-solid fa-x" style="color: #075e94;"></i></button>
+    </div>
+    
+    <div class="side-links">
+      <a href="#freelancers"><i class="fa-solid fa-magnifying-glass" style="font-size: 15px;"></i> <span class="txt-find">Find Freelancer</span></a>
+      <a href="/pageshtml/profile.html"><i class="fa-solid fa-briefcase"style="font-size: 15px;" ></i> <span class="txt-work">Profile</span></a>
+      <a href="/pageshtml/create.html"><i class="fa-solid fa-users" style="font-size: 15px;"></i> <span class="txt-team">Explore Projects</span></a></a>
+      <a href="/pageshtml/pageteam.html"><i class="fa-solid fa-users" style="font-size: 15px;"></i> <span class="txt-team">Team Page</span></a>
+      <a href="/pageshtml/dashbord.html"><i class="fas fa-chart-line"></i><span class="txt-team">Dashborad</span></a>
+      <a href="/pageshtml/ranking.html"> <i class="fas fa-podium"></i><span class="txt-team">Ranking</span></a>
+      <a href="/pageshtml/loction.html"><i class="fas fa-map-marked-alt"></i><span class="txt-team">Loction</span></a>
+      <hr>
+      <a href="#" class="lang-btn" onclick="toggleLanguage()">
+        <i class="fa-solid fa-globe" style="font-size: 15px;"></i> <span class="txt-lang-toggle">Language: English</span>
+      </a>
+    </div>
+
+    <div class="side-auth">
+      <a href="#" class="side-login">Log In</a>
+      <a href="#" class="side-signup" style="color: white;">Sign Up</a>
+    </div>
+  </div>
+</div> 
+
+
+
+    <section class="manager-team">
+      <div class="container">
+        <div class="row g-4">
+          <div class="container">
+            <h1 class="mt-5">Leadership Team</h1>
+          </div>
+          <div class="col-md-4">
+            <div class="member-card">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8JplNqvas4Bm2RWNvyR3uPU0m36cRSn2UOQ&s"
+                width="90"
+                class="mb-3"
+              />
+              <h5>Osama Al-Zero</h5>
+              <span class="role-badge"> Founder </span>
+              <p class="card-text mt-2">
+                Leads the vision and strategy of SkillBridge, connecting ideas
+                with developers and guiding projects from concept to completion.
+              </p>
+              <button type="button" class="btn custom-btn btn-sm">
+                View Profile
+              </button>
+              <button type="button" class="btn custom-btn btn-sm">
+                Message
+              </button>
+              <div class="mt-3">
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="member-card">
+              <img
+                src="https://yt3.googleusercontent.com/jVkZNv7aNBZFFQsTDCLlHM1qqX2ZJSwh_khC7n4JCgZCxescg8AQgYlozZ9xHq7phfS5WoL1wfs=s900-c-k-c0x00ffffff-no-rj"
+                width="90"
+                class="mb-3"
+              />
+
+              <h5>Ali Shahin</h5>
+
+              <span class="role-badge"> Tech Lead </span>
+              <p class="card-text mt-2">
+                Leads the vision and strategy of SkillBridge, connecting ideas
+                with developers and guiding projects from concept to completion.
+              </p>
+
+              <button type="button" class="btn custom-btn btn-sm">
+                View Profile
+              </button>
+
+              <button type="button" class="btn custom-btn btn-sm">
+                Message
+              </button>
+              <div class="mt-3">
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="member-card">
+              <img
+                src="https://media.licdn.com/dms/image/v2/D4D03AQETlU1bDP4SAA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1732014154994?e=2147483647&v=beta&t=gnimlIVdYuT4ssTP4hTqJbUhJh_1X_F81ffVZ52V4Wc"
+                width="90"
+                class="mb-3"
+              />
+
+              <h5>Salah Abu Al-Majd</h5>
+
+              <span class="role-badge"> Project Manager </span>
+              <p class="card-text mt-2">
+                Leads the vision and strategy of SkillBridge, connecting ideas
+                with developers and guiding projects from concept to completion.
+              </p>
+
+              <button type="button" class="btn custom-btn btn-sm">
+                View Profile
+              </button>
+
+              <button type="button" class="btn custom-btn btn-sm">
+                Message
+              </button>
+              <div class="mt-3">
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Header Section -->
+    <section class="team-header mt-5">
+      <div class="container">
+        <h2>Project Team Members</h2>
+        <p>Meet the collaborators working on this idea</p>
+      </div>
+    </section>
+
+    <!-- Team Achievement Metrics -->
+    <section class="container mt-4 mb-5">
+      <div class="row g-4">
+        <!-- Card 1 -->
+        <div class="col-xl-3 col-sm-6">
+          <div class="card shadow-sm border-0 h-100" style="border-radius: 12px; border-left: 4px solid #8d774a !important; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div class="card-body p-4 d-flex align-items-center justify-content-between">
+              <div>
+                <div class="text-muted fw-bold small text-uppercase mb-1">Team Members</div>
+                <div class="fs-3 fw-bold" style="color: #142766;">42</div>
+              </div>
+              <div class="icon-circle" style="background: rgba(141,119,74,0.1); color: #8d774a; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;"><i class="fa-solid fa-users"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="col-xl-3 col-sm-6">
+          <div class="card shadow-sm border-0 h-100" style="border-radius: 12px; border-left: 4px solid #81c784 !important; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div class="card-body p-4 d-flex align-items-center justify-content-between">
+              <div>
+                <div class="text-muted fw-bold small text-uppercase mb-1">Projects Completed</div>
+                <div class="fs-3 fw-bold" style="color: #142766;">128</div>
+              </div>
+              <div class="icon-circle" style="background: rgba(129,199,132,0.1); color: #81c784; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;"><i class="fa-solid fa-check-double"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="col-xl-3 col-sm-6">
+          <div class="card shadow-sm border-0 h-100" style="border-radius: 12px; border-left: 4px solid #8e44ad !important; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div class="card-body p-4 d-flex align-items-center justify-content-between">
+              <div>
+                <div class="text-muted fw-bold small text-uppercase mb-1">Active Clients</div>
+                <div class="fs-3 fw-bold" style="color: #142766;">35</div>
+              </div>
+              <div class="icon-circle" style="background: rgba(142,68,173,0.1); color: #8e44ad; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;"><i class="fa-solid fa-briefcase"></i></div>
+            </div>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="col-xl-3 col-sm-6">
+          <div class="card shadow-sm border-0 h-100" style="border-radius: 12px; border-left: 4px solid #f6c23e !important; transition: transform 0.2s;" onmouseover="this.style.transform='translateY(-5px)'" onmouseout="this.style.transform='translateY(0)'">
+            <div class="card-body p-4 d-flex align-items-center justify-content-between">
+              <div>
+                <div class="text-muted fw-bold small text-uppercase mb-1">Years of Exp</div>
+                <div class="fs-3 fw-bold" style="color: #142766;">5+</div>
+              </div>
+              <div class="icon-circle" style="background: rgba(246,194,62,0.1); color: #f6c23e; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.25rem;"><i class="fa-solid fa-award"></i></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Team Members Section -->
+
+    <section class="container mt-5">
+      <div class="row g-4">
+        <!-- Member 1 -->
+        <div class="col-md-4">
+          <div class="member-card">
+            <img
+              src="https://i.pravatar.cc/150?img=5"
+              width="90"
+              class="mb-3"
+            />
+            <h5>Sarah Ahmed</h5>
+            <p>Frontend Developer</p>
+            <span class="role-badge"> React Specialist </span>
+            <div>
+              <h4>Her skills</h4>
+              <p>HTML , CSS , JS , bootstrap , React</p>
+            </div>
+            <div class="mt-3">
+              <button class="btn btn-outline-primary btn-sm">
+                View Profile
+              </button>
+              <button class="btn btn-outline-secondary btn-sm">Message</button>
+              <div class="mt-3">
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Member 2 -->
+
+        <div class="col-md-4">
+          <div class="member-card">
+            <img
+              src="https://i.pravatar.cc/150?img=8"
+              width="90"
+              class="mb-3"
+            />
+
+            <h5>Omar Khaled</h5>
+
+            <p>Backend Developer</p>
+
+            <span class="role-badge"> Node.js Engineer </span>
+            <div>
+              <h4>Your skills</h4>
+              <p>Node.JS , PHP , MySQL , MongoDB , GET , POST</p>
+            </div>
+
+            <div class="mt-3">
+              <button class="btn btn-outline-primary btn-sm">
+                View Profile
+              </button>
+
+              <button class="btn btn-outline-secondary btn-sm">Message</button>
+              <div class="mt-3">
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Member 3 -->
+
+        <div class="col-md-4">
+          <div class="member-card">
+            <img
+              src="https://i.pravatar.cc/150?img=12"
+              width="90"
+              class="mb-3"
+            />
+
+            <h5>Mona Ali</h5>
+
+            <p>UI/UX Designer</p>
+
+            <span class="role-badge"> Figma Expert </span>
+            <div>
+              <h4>Her skills</h4>
+              <p>Responsive Design , Layout&Spacing , Figma</p>
+            </div>
+
+            <div class="mt-3">
+              <button class="btn btn-outline-primary btn-sm">
+                View Profile
+              </button>
+
+              <button class="btn btn-outline-secondary btn-sm">Message</button>
+              <div class="mt-3">
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+                <a href="#"> <i class="fa-brands fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mt-5">
+      <div class="row g-4 text-start">
+        <!-- Roles Chart -->
+        <div class="col-lg-4">
+          <div class="member-card text-start h-100 p-4 d-flex flex-column">
+            <h5 class="fw-bold mb-4" style="color: #142766">
+              Role Distribution
+            </h5>
+            <div
+              class="flex-grow-1 position-relative"
+              style="min-height: 250px"
+            >
+              <canvas id="teamRolesChart"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- Team Status -->
+        <div class="col-lg-4">
+          <div class="member-card text-start h-100 p-4">
+            <h5 class="fw-bold mb-4" style="color: #142766">Team Status</h5>
+
+            <div class="status-item">
+              <img
+                src="https://i.pravatar.cc/150?img=5"
+                alt="Sarah"
+                class="me-3 rounded-circle border border-2"
+                width="45"
+              />
+              <div class="flex-grow-1">
+                <h6 class="mb-0 fw-bold" style="color: #8d774a">Sarah Ahmed</h6>
+                <small class="text-muted">Frontend</small>
+              </div>
+              <div class="text-end">
+                <span class="status-dot dot-working"></span
+                ><small class="fw-medium">Working</small>
+              </div>
+            </div>
+
+            <div class="status-item">
+              <img
+                src="https://i.pravatar.cc/150?img=12"
+                alt="Mona"
+                class="me-3 rounded-circle border border-2"
+                width="45"
+              />
+              <div class="flex-grow-1">
+                <h6 class="mb-0 fw-bold" style="color: #8d774a">Mona Ali</h6>
+                <small class="text-muted">UI/UX</small>
+              </div>
+              <div class="text-end">
+                <span class="status-dot dot-available"></span
+                ><small class="fw-medium">Available</small>
+              </div>
+            </div>
+
+            <div class="status-item border-0 pb-0">
+              <img
+                src="https://i.pravatar.cc/150?img=33"
+                alt="Tarek"
+                class="me-3 rounded-circle border border-2"
+                width="45"
+              />
+              <div class="flex-grow-1">
+                <h6 class="mb-0 fw-bold" style="color: #8d774a">
+                  Tarek Hassan
+                </h6>
+                <small class="text-muted">Manager</small>
+              </div>
+              <div class="text-end">
+                <span class="status-dot dot-leave"></span
+                ><small class="fw-medium">On Leave</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="col-lg-4">
+          <div class="member-card text-start h-100 p-4">
+            <h5 class="fw-bold mb-4" style="color: #142766">
+              Recent Activities
+            </h5>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-date">Today, 10:30 AM</div>
+                <div class="timeline-content">
+                  Medical App UI design phase completed by
+                  <span class="fw-bold" style="color: #8d774a">Mona</span>.
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">Yesterday, 04:15 PM</div>
+                <div class="timeline-content">
+                  New project kickoff for Cloud Migration. Lead by
+                  <span class="fw-bold" style="color: #8d774a">Tarek</span>.
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">Oct 12, 09:00 AM</div>
+                <div class="timeline-content">
+                  Sprint planning meeting held for E-Commerce team.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row g-4 text-start mt-1">
+        <!-- Latest Projects -->
+        <div class="col-lg-8">
+          <div class="member-card text-start h-100 p-4">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h5 class="fw-bold mb-0" style="color: #142766">
+                Latest Projects
+              </h5>
+              <button class="btn btn-sm custom-btn rounded-pill px-3">
+                View All
+              </button>
+            </div>
+            <div class="table-responsive">
+              <table class="table table-borderless align-middle mb-0">
+                <thead class="border-bottom">
+                  <tr>
+                    <th class="pb-3 px-0">Project Name</th>
+                    <th class="pb-3 text-center">Status</th>
+                    <th class="pb-3 text-center">Team Leads</th>
+                    <th class="pb-3">Completion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="py-3 px-0">
+                      <div class="d-flex align-items-center">
+                        <div
+                          class="icon-circle me-3"
+                          style="
+                            background: rgba(141, 119, 74, 0.1);
+                            color: #8d774a;
+                          "
+                        >
+                          <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <div>
+                          <h6 class="mb-0 fw-bold" style="color: #8d774a">
+                            Medical App UI
+                          </h6>
+                          <small class="text-muted">Healthcare Client</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-center py-3">
+                      <span
+                        class="badge badge-soft-warning rounded-pill px-3 py-2"
+                        >In Progress</span
+                      >
+                    </td>
+                    <td class="text-center py-3">
+                      <div class="d-flex justify-content-center">
+                        <img
+                          src="https://i.pravatar.cc/150?img=12"
+                          class="rounded-circle border border-white border-2"
+                          width="30"
+                          style="margin-right: -10px; z-index: 2"
+                        />
+                        <img
+                          src="https://i.pravatar.cc/150?img=5"
+                          class="rounded-circle border border-white border-2"
+                          width="30"
+                          style="z-index: 1"
+                        />
+                      </div>
+                    </td>
+                    <td class="py-3" style="width: 25%">
+                      <div class="d-flex justify-content-between mb-1">
+                        <small class="fw-bold text-muted">65%</small>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar"
+                          style="width: 65%; background-color: #8d774a"
+                        ></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-0">
+                      <div class="d-flex align-items-center">
+                        <div
+                          class="icon-circle me-3"
+                          style="
+                            background: rgba(20, 39, 102, 0.1);
+                            color: #142766;
+                          "
+                        >
+                          <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <div>
+                          <h6 class="mb-0 fw-bold" style="color: #8d774a">
+                            E-commerce Portal
+                          </h6>
+                          <small class="text-muted">Retail Client</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-center py-3">
+                      <span
+                        class="badge badge-soft-success rounded-pill px-3 py-2"
+                        >Completed</span
+                      >
+                    </td>
+                    <td class="text-center py-3">
+                      <div class="d-flex justify-content-center">
+                        <img
+                          src="https://i.pravatar.cc/150?img=8"
+                          class="rounded-circle border border-white border-2"
+                          width="30"
+                          style="z-index: 1"
+                        />
+                      </div>
+                    </td>
+                    <td class="py-3" style="width: 25%">
+                      <div class="d-flex justify-content-between mb-1">
+                        <small class="fw-bold text-muted">100%</small>
+                      </div>
+                      <div class="progress">
+                        <div
+                          class="progress-bar bg-success"
+                          style="width: 100%"
+                        ></div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Top Performers -->
+        <div class="col-lg-4">
+          <div class="member-card text-start h-100 p-4">
+            <h5 class="fw-bold mb-4" style="color: #142766">Top Performers</h5>
+
+            <div class="member-list-item mb-2">
+              <div class="d-flex align-items-center">
+                <img
+                  src="https://i.pravatar.cc/150?img=47"
+                  class="rounded-circle me-3"
+                  style="width: 40px; height: 40px"
+                />
+                <div>
+                  <h6 class="mb-0 fw-bold" style="color: #8d774a">
+                    Karim Youssef
+                  </h6>
+                  <small class="text-muted">Fullstack Dev</small>
+                </div>
+              </div>
+              <div class="text-end">
+                <div class="fw-bold" style="color: #142766">15</div>
+                <small class="text-muted">Projects</small>
+              </div>
+            </div>
+
+            <div class="member-list-item mb-2">
+              <div class="d-flex align-items-center">
+                <img
+                  src="https://i.pravatar.cc/150?img=5"
+                  class="rounded-circle me-3"
+                  style="width: 40px; height: 40px"
+                />
+                <div>
+                  <h6 class="mb-0 fw-bold" style="color: #8d774a">
+                    Sarah Ahmed
+                  </h6>
+                  <small class="text-muted">Frontend Dev</small>
+                </div>
+              </div>
+              <div class="text-end">
+                <div class="fw-bold" style="color: #142766">12</div>
+                <small class="text-muted">Projects</small>
+              </div>
+            </div>
+
+            <div class="member-list-item">
+              <div class="d-flex align-items-center">
+                <img
+                  src="https://i.pravatar.cc/150?img=12"
+                  class="rounded-circle me-3"
+                  style="width: 40px; height: 40px"
+                />
+                <div>
+                  <h6 class="mb-0 fw-bold" style="color: #8d774a">Mona Ali</h6>
+                  <small class="text-muted">UI/UX Designer</small>
+                </div>
+              </div>
+              <div class="text-end">
+                <div class="fw-bold" style="color: #142766">8</div>
+                <small class="text-muted">Projects</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="py-5 bg-light">
+      <div class="container text-center">
+        <!-- Contributors Section -->
+        <section class="container text-center my-5">
+          <h2 class="mb-3">Contributors & Collaborators</h2>
+
+          <p class="text-muted mx-auto mb-5" style="max-width: 600px">
+            SkillBridge grows through the support of idea owners, external
+            contributors, and passionate collaborators who help transform
+            concepts into real projects.
+          </p>
+
+          <div class="row g-4">
+            <!-- Idea Owners -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card shadow-sm h-100 border-0">
+                <div class="card-body">
+                  <h5 class="card-title">Idea Owners</h5>
+                  <p class="card-text">
+                    Individuals who bring innovative ideas and collaborate with
+                    developers to turn concepts into real solutions.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- External Contributors -->
+            <div class="col-lg-4 col-md-6">
+              <div class="card shadow-sm h-100 border-0">
+                <div class="card-body">
+                  <h5 class="card-title">External Contributors</h5>
+                  <p class="card-text">
+                    Professionals who support projects with their expertise in
+                    development, design, and technical consulting.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Volunteers -->
+            <div class="col-lg-4 col-md-6 mx-auto">
+              <div class="card shadow-sm h-100 border-0">
+                <div class="card-body">
+                  <h5 class="card-title">Volunteers</h5>
+                  <p class="card-text">
+                    Passionate individuals helping the community grow by sharing
+                    knowledge and supporting collaborative learning experiences.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="workspace-section py-5">
+          <div class="container text-center">
+            <h2 class="mb-5 fw-bold">Our Workspace</h2>
+
+            <div class="row g-4">
+              <!-- Workspace 1 -->
+              <div class="col-md-4">
+                <div class="workspace-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+                    class="img-fluid"
+                  />
+
+                  <div class="workspace-overlay">
+                    <h4>Team Collaboration</h4>
+                    <p>We work together using modern collaboration tools</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Workspace 2 -->
+              <div class="col-md-4">
+                <div class="workspace-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+                    class="img-fluid"
+                  />
+
+                  <div class="workspace-overlay">
+                    <h4>Development Area</h4>
+                    <p>Clean environment for coding & creativity</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Workspace 3 -->
+              <div class="col-md-4">
+                <div class="workspace-card">
+                  <img
+                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72"
+                    class="img-fluid"
+                  />
+
+                  <div class="workspace-overlay">
+                    <h4>Planning Sessions</h4>
+                    <p>Smart planning leads to better results</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    <!-- Join Team Section -->
+    <section class="join-team-section py-5 text-center text-white">
+      <div class="container join-content">
+        <h2 class="join-title">Want to join this team?</h2>
+        <p class="join-text">Apply now and become part of the project</p>
+        <div class="join-buttons">
+          <button class="btn apply-btn">Apply To Join</button>
+          <button class="btn invite-btn">Invite Member</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="custom-footer w-100 py-4 mt-auto">
+      <div
+        class="container-fluid px-4 px-md-5 d-flex flex-column flex-md-row justify-content-between align-items-center"
+      >
+        <div class="mb-3 mb-md-0 fw-medium text-muted">
+          &copy; 2026 SkillBridge. All rights reserved.
+        </div>
+        <div>
+          <a href="#" class="footer-link">Support & Contact</a> |
+          <a href="#" class="footer-link">Privacy Policy</a>
+        </div>
+        <div class="social-icons mt-3 mt-md-0">
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#"><i class="fa-brands fa-github"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- FontAwesome CDN for social icons -->
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button class="chat-btn" onclick="toggleChat()">
+         <i class="fa-solid fa-robot" style="color:#e1b055;"></i>
+        
+    </button>
+
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <div class="user-info">
+                <div class="avatar">AI</div>
+                <div>
+                    <h4>SkillBridge Assistant</h4>
+                    <small>Online | Ready to help</small>
+                </div>
+            </div>
+            <button class="close-btn" onclick="toggleChat()">&times;</button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                Welcome to SkillBridge! Are you looking for talented graduates or starting your freelance journey?
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type your message here...">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+
+<script src="../js/script.js"></script>
+<script src="../js/team.js"></script>
+ <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+</body>
+
+</html>

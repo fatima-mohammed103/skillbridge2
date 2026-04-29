@@ -1,0 +1,57 @@
+
+  /* حل مشكلة التداخل مع الهيدر */
+  .location-section {
+    margin-top: 70px; /* نفس طول الهيدر الثابت عندك */
+    background-color: #fff;
+  }
+
+  /* تنسيق اللوحة الجانبية */
+  .side-panel {
+    background-color: #ffffff;
+    height: calc(100vh - 70px);
+    overflow-y: hidden;
+    z-index: 10;
+  }
+
+  /* تصغير حجم الخطوط لتناسب اللوحة الصغيرة */
+  .side-panel h6 {
+    font-size: 0.9rem;
+    color: var(--maincolor);
+  }
+
+  .form-control, .form-select {
+    font-size: 0.85rem !important;
+    border-radius: 8px !important;
+  }
+
+  /* سكرول بار ناعم لقائمة المطورين */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 4px;
+  }
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 10px;
+  }
+
+  /* تأكد من أن الخريطة تغطي المساحة المتبقية */
+  #map {
+    border-left: 1px solid #eee;
+  }
+
+  /* الموبايل */
+  @media (max-width: 768px) {
+    .location-section {
+      margin-top: 60px;
+    }
+    .side-panel {
+      height: auto;
+      border-end: none;
+      border-bottom: 1px solid #eee;
+    }
+    #map {
+      height: 400px !important;
+    }
+  }

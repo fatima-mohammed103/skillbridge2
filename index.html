@@ -1,0 +1,861 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge</title>
+
+  <link rel="stylesheet" href="csspags/style.css">
+  <script src="https://kit.fontawesome.com/ca825dfbdd.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="parent-container">
+
+<nav class="main-nav">
+  <div class="nav-container">
+    
+    <div class="nav-left">
+      <button class="menu-btn" onclick="openMenu()">☰</button>
+ <a href="index.html" class="brand"><img src="/imags/download.png" alt="" style="width: 210px;"></a>
+        
+
+    <ul class="nav-links">
+      <li><a href="#freelancers"id="">Find Freelancer</a></li>
+      <li><a href="/pageshtml/create.html">Explore Projects</a></li>
+      <li><a href="/pageshtml/dashbord.html">Dashborad</a></li>
+      <li class="dropdown">
+        <a href="#" id="link-more" >More ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/pageshtml/profile.html">Profile</a></li>
+          <li><a href="/pageshtml/ranking.html">Ranking</a></li>
+          <li><a href="/pageshtml/pageteam.html"> Team Page</a></li>
+          <li><a href="/pageshtml/loction.html">Loction</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div> 
+    <div class="nav-right">
+      <div class="search-box">
+        <input type="search" placeholder="Search a talent..." class="search-input" />
+        <button class="search-icon">🔍</button>
+      </div>
+      
+    <button class="lang-btn lang-btn-desktop" onclick="toggleLanguage()">AR</button>
+<!-- 
+      <div class="auth-buttons">
+        <a class="login">Log In</a> -->
+        
+        <a class="nav-signup-btn" href="./pageshtml/signup.html">Sign Up</a>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+  <div id="overlay" onclick="closeMenu()"></div>
+
+  <div id="sideMenu">
+    <div class="side-header">
+      <a href="index.html" class="side-brand">
+        <img src="/imags/download.png" alt="Logo">
+      </a>
+      <button class="close-btn" onclick="closeMenu()"><i class="fa-solid fa-x" style="color: #075e94;"></i></button>
+    </div>
+    
+    <div class="side-links">
+      <a href="#freelancers"><i class="fa-solid fa-magnifying-glass" style="font-size: 15px;"></i> <span class="txt-find">Find Freelancer</span></a>
+      <a href="/pageshtml/profile.html"><i class="fa-solid fa-briefcase"style="font-size: 15px;" ></i> <span class="txt-work">Profile</span></a>
+      <a href="/pageshtml/create.html"><i class="fa-solid fa-users" style="font-size: 15px;"></i> <span class="txt-team">Explore Projects</span></a></a>
+      <a href="/pageshtml/pageteam.html"><i class="fa-solid fa-users" style="font-size: 15px;"></i> <span class="txt-team">Team Page</span></a>
+      <a href="/pageshtml/dashbord.html"><i class="fas fa-chart-line"></i><span class="txt-team">Dashborad</span></a>
+      <a href="/pageshtml/ranking.html"> <i class="fas fa-podium"></i><span class="txt-team">Ranking</span></a>
+      <a href="/pageshtml/loction.html"><i class="fas fa-map-marked-alt"></i><span class="txt-team">Loction</span></a>
+      <hr>
+      <a href="#" class="lang-btn" onclick="toggleLanguage()">
+        <i class="fa-solid fa-globe" style="font-size: 15px;"></i> <span class="txt-lang-toggle">Language: English</span>
+      </a>
+    </div>
+
+    <div class="side-auth">
+      <a href="./pageshtml/login.html" class="side-login">Log In</a>
+      <a href="./pageshtml/ranking.html" class="side-signup" style="color: white;">Sign Up</a>
+    </div>
+  </div>
+</div> 
+
+
+    <!-- Hero -->
+     <main class="container "id="freelancer">
+      <section class="hero-box " >
+
+        <video autoplay muted loop class="bg-video">
+          <source src="/imags/hero-video-lg.mp4">
+        </video>
+
+        <div class="overlay"></div>
+
+         <div class="hero-content">
+        <h1 class="fw-bold display-5">How work should work</h1>
+        <p class="fs-5">Find the right talent for your business</p>
+        <div class="hero-search-bar shadow">
+          <input type="search" placeholder="What service are you looking for?">
+          <button>Search</button>
+        </div>
+
+        </div>
+
+      </section>
+    </main> 
+
+    
+
+<section>
+   <div class="container mt-5 mb-5">
+   <div class="service-header text-center">
+    <p class="hero-text">
+        Expert services tailored to <span class="highlight">scale your business</span>
+    </p>
+    <div class="minimal-divider"></div>
+</div>
+    <div class="row g-4">
+        
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm p-4 rounded-4 hover-shadow">
+                <div class="icon-box bg-primary bg-opacity-10 text-primary mb-4">
+                    <i class="fas fa-briefcase fa-lg"></i>
+                </div>
+                <h3 class="h5 font-weight-bold text-dark mb-3">For Business Owners</h3>
+                <p class="text-secondary mb-0">Get design, programming, and marketing for your project at rates that fit your small budget, delivered by talents eager to achieve.</p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm p-4 rounded-4 hover-shadow">
+                <div class="icon-box bg-success bg-opacity-10 text-success mb-4">
+                    <i class="fas fa-graduation-cap fa-lg"></i>
+                </div>
+                <h3 class="h5 font-weight-bold text-dark mb-3">For Graduates & Students</h3>
+                <p class="text-secondary mb-0">Don't let the "prior experience" requirement stop you. Apply your skills in real projects and build your portfolio with confidence.</p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm p-4 rounded-4 hover-shadow">
+                <div class="icon-box bg-purple bg-opacity-10 text-purple mb-4">
+                    <i class="fas fa-users fa-lg"></i>
+                </div>
+                <h3 class="h5 font-weight-bold text-dark mb-3">Build Your Dream Team</h3>
+                <p class="text-secondary mb-0">Need more than one developer? Create a specialized team of graduates to handle complex projects collaboratively and efficiently.</p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm p-4 rounded-4 hover-shadow">
+                <div class="icon-box bg-warning bg-opacity-10 text-warning mb-4">
+                    <i class="fas fa-map-marker-alt fa-lg"></i>
+                </div>
+                <h3 class="h5 font-weight-bold text-dark mb-3">Find Local Talent</h3>
+                <p class="text-secondary mb-0">Prefer working face-to-face? Easily find and connect with skilled developers located near you for better communication and local support.</p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm p-4 rounded-4 hover-shadow">
+                <div class="icon-box bg-danger bg-opacity-10 text-danger mb-4">
+                    <i class="fas fa-award fa-lg"></i>
+                </div>
+                <h3 class="h5 font-weight-bold text-dark mb-3">Verified Certificates</h3>
+                <p class="text-secondary mb-0">Boost your CV with official certificates, awarded based on your project performance and real client ratings to impress future employers.</p>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-4">
+            <div class="card h-100 border-0 shadow-sm p-4 rounded-4 hover-shadow">
+                <div class="icon-box bg-info bg-opacity-10 text-info mb-4">
+                    <i class="fas fa-robot fa-lg"></i>
+                </div>
+                <h3 class="h5 font-weight-bold text-dark mb-3">AI Assistant</h3>
+                <p class="text-secondary mb-0">Have a question? Our smart AI Assistant is available around the clock to guide you on how to best utilize the platform.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<!--  -->
+
+
+
+    <div class="container " id="freelancers">
+        
+        <h3>Find freelancers for every type of work</h3>
+        <section class="mainSec">
+              <section>
+               <div class="row "  id="reduceHight">      
+            <a class="Border  col col-lg-2 col-md-4 col-sm-6" onclick="showImg(event); whenClick()" >
+                <div>
+                    <i class="fa-brands fa-screenpal"></i>
+                    <p>AI Services</p>
+                </div>
+            </a>
+            <a class="Border col col-lg-2 col-md-4 col-sm-6" href="#IMG_2" onclick="showImg_2(event); whenClick()" >
+                <div>
+                  <i class="fa-solid fa-code" ></i>
+                    <p>Development & IT</p>
+                </div>
+            </a>
+            <a class="Border col col-lg-2 col-md-4 col-sm-6" href="#IMG" onclick="showImg(event); whenClick()">
+                <div>
+                   <i class="fa-solid fa-palette"></i>
+                    <p>Design & Creative</p>
+                </div>
+            </a>
+            <a class="Border col col-lg-2 col-md-4 col-sm-6" href="#IMG" onclick="showImg_2(event); whenClick()" >
+                <div>
+                    <i class="fa-regular fa-handshake" ></i>
+                    <p>Sales & Marketing</p>
+                </div>
+            </a>
+            <a class="Border col col-lg-2 col-md-4 col-sm-6" href="#IMG" onclick="showImg(event); whenClick()" >
+                <div>
+                   <i class="fa-solid fa-pen-nib"></i>
+                    <p>Writing & Translation</p>
+                </div>
+            </a>
+
+            <a class="Border col col-lg-2 col-md-4 col-sm-6" href="#IMG" onclick="showImg_2(event); whenClick()">
+                <div>
+                    <i class="fa-solid fa-user-tie" ></i>
+                    <p>Admin & Support</p>
+                </div>
+            </a>
+            <a class="Border col col-lg-2 col-md-4 col-sm-6" href="#IMG" onclick="showImg(event); whenClick()">
+                <div>
+                    <i class="fa-solid fa-landmark" ></i>
+                    <p>Finance & Accounting</p>
+                </div>
+            </a> 
+            <a class="Border col col-lg-2 col-md-4 col-sm-6" href="#IMG" onclick="showImg_2(event); whenClick()">
+                <div>
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <p>Legal</p>
+                </div>
+            </a>
+            <a class="Border col col-lg-2 col-md-4 col-sm-6" href="#IMG" onclick="showImg_2(event); whenClick()">
+                <div>
+                   <i class="fa-solid fa-user-group" ></i>
+                    <p>HR & Training</p>
+                </div>
+            </a>
+            <a class="Border col col-lg-2 col-md-12 col-sm-6" href="#IMG" onclick="showImg(event); whenClick()">
+                <div>
+                    <i class="fa-solid fa-screwdriver-wrench" ></i>
+                    <p>Engineering & Architecture</p>
+                </div>
+            </a>
+        </div>
+        </section>
+
+        <section class="">
+              <!--IMG_1-->
+    <div class="">
+        <div  id="IMG" >
+          <!--ROw 2-->
+        <div class="row g-3" id="photo">
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card border-0">
+                    <img src="https://www.upwork.com/profile-portraits/c13KFoLcXo8v4Ue6XvClkJ-jhz7kLd7Qwr-tkr8fCnlgYhwUEnyzNCxME5vLtI75G1" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Scientists</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.8 on avg.
+                        </p>
+                        <p>$ 60/hr+</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-lg-2 col-md-3  col-sm-4 text-decoration-none">
+                 <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1dNpvRI4u9zW51Er_Tc-sJgPkeLA8N4mNAV3DNOXWi8htZ7UA60Eo43b1sb7LSmDE" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">AI Research</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.8 on avg.
+                        </p>
+                        <p>$ 25/hr+</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1MjpqKC_oKHxIk6qODd5qSAmsAVnaVVJmg_xR7T2w9WVWZb7NdEPmUfBT6KXozMvK" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">AI Consultants</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.8 on avg.
+                        </p>
+                        <p>$ 60/hr+</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1S7NXWQpwQpD1OjyqG89C73ugJmq6u4O4hgIvvWFGZRAtLX2uHbVbJMNL5U1H_8AG" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Promot Engineers</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.8 on avg.
+                        </p>
+                        <p>$ 25/hr+</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1vle0wkHfWtYiqSKhelOwhFAF80hnvK_1FjAa7IZo_3bTbxgfbzPV3HCVBT9K3ZJC" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Ethical Hacker</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.7 on avg.
+                        </p>
+                        <p>$ 83/hr+</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1R2bYzeKFXfCFwhkDjnGWxsoaNGgv57P3Lh6sGEQDrn8O6IGdeBRB4X6djZvXpO1_" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Resume Designers</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.9 on avg.
+                        </p>
+                        <p>$ 50/hr+</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1rvj4SHc61WZevAdxPnEIKO590GYegNEsSiQuIWuahqzCpt5mRIWgt98bL64etXEs" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Data Scientists</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.8 on avg.
+                        </p>
+                        <p>$ 60/hr+</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1sweUXJ3MoYbQYyeXE9leg1T7ZkOJDh18-O7jPmqDdFXyKUTVMcIbbJcawM3s8tQH" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Brand & Logo Designers</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.9 on avg.
+                        </p>
+                        <p>$ 50/hr+</p>
+                    </div>
+                </div>
+            </a>
+       
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                 <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1veD9oKEe-qmzeIGZEde4TYaAExLGW7M1jcLdERUDB2WiyTsAAncp3JVb87sFdWYl" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Website Developers</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.8 on avg.
+                        </p>
+                        <p>$ 50/hr+</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1plmGpNt8IZnrgoIduH1bzCk_99mfPOgh9IZpKVr1HrHq6YOf08qyMSuG427E7_Qy" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">App Developers</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.8 on avg.
+                        </p>
+                        <p>$ 43/hr+</p>
+                    </div>
+                </div>
+            </a>
+             <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c10viNXi-rFHI3YggPVAR7cu4ChkEPvPqMFaJNMAod_TzWebx_OzAK-YWOn_CvBrHq" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Flutter Developers</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.8 on avg.
+                        </p>
+                        <p>$ 43/hr+</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1IciUUwSF-RCQUetsBJZhqClKkvMojmadm5tDefIJcSG_zsXFliLHXjR8OFQESrIF" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Dlockchain Developers</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.7 on avg.
+                        </p>
+                        <p>$ 78/hr+</p>
+                    </div>
+                </div>
+            </a> 
+            
+        </div>
+        </div>
+    </div>
+ </section>
+    <!--IMG_ -->
+    <section>
+    <div class="">
+        <div  id="IMG_2" >
+         <!-- ROw 3 -->
+        <div class="row g-3" id="photo_2">
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card border-0">
+                    <img src="https://www.upwork.com/profile-portraits/c1Pvtyqse-9Y73g5OUB9_aH2W2fDU8QsNLwAiWZzzeswDruGDsxPlHHijta4KknrYL" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Paralegals</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.7 on avg.
+                        </p>
+                        <p>$ 63/hr+</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-lg-2 col-md-3  col-sm-4 text-decoration-none">
+                 <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1ExgxdoGDNADE4CntgeQAzNh5Yaik2f_7n7m-Qe2seYk8jylyCPAQDlwagFivQ5sd" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">CAD Designers</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.8 on avg.
+                        </p>
+                        <p>$ 43/hr+</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c17i9hfiz4Mbz1nuRlwmtD8nCRrk1eaM5330lTrfmp5KCmSHwC69l4Wuc6kdu1PJpa" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">AI Consultants</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.8 on avg.
+                        </p>
+                        <p>$ 60/hr+</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1q_8zeBxK7OFd-sDpENdqArFiarqbssPOq6UmfjbZn2TG4FwoGhXyvT2LZ2g6Ab-k" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Promot Engineers</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.8 on avg.
+                        </p>
+                        <p>$ 25/hr+</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1Zf0tGQr6nCFMH_C8zQvfUUUdGbqObsVK4pu06nE_4dZodhdVp04OPHpYlbeD5ksq" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Ethical Hacker</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.7 on avg.
+                        </p>
+                        <p>$ 83/hr+</p>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1z6j6gzTiGm2txv2bMfXtKd7nA6zoibxQ1ND_ytbk_2usaYYXHy3YPIze0MWF8ej7" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Resume Designers</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.9 on avg.
+                        </p>
+                        <p>$ 50/hr+</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1SIl46h5A-KfNhAMpudacMWK0u860PkR_V4wIVfXRkdGOlU3GjMo-0gKuhq9m8_pn" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Email Marketing Consultants</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.7 on avg.
+                        </p>
+                        <p>$ 53/hr+</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1OXG8LxeIs-AdmNFUY0D2NYVGpXZF8XXM0YcSV5YMnpR5kocsKBlMM3bGWGVishAQ" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Lead Generation Specialists</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.7 on avg.
+                        </p>
+                        <p>$ 25/hr+</p>
+                    </div>
+                </div>
+            </a>
+       
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                 <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c17qHmKEVxMz6xDSt-ycwcTbRYYQSHzo4DYh_DkkBB78v0YSXXPCLwNpNeq3oqXj0K" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Website Developers</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.8 on avg.
+                        </p>
+                        <p>$ 50/hr+</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1z6j6gzTiGm2txv2bMfXtKd7nA6zoibxQ1ND_ytbk_2usaYYXHy3YPIze0MWF8ej7" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">App Developers</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.8 on avg.
+                        </p>
+                        <p>$ 43/hr+</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1Lu2yYMzcn5tjJKUw5249sZw7a-mRjGcPer4MkJjt80-_IODwGsJpvjhf2x6-kqN5" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Architectural Designers</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.8 on avg.
+                        </p>
+                        <p>$ 25/hr+</p>
+                    </div>
+                </div>
+            </a>
+            <a href="#" class="col col-lg-2 col-md-3 col-sm-4 text-decoration-none">
+                <div class="card">
+                    <img src="https://www.upwork.com/profile-portraits/c1m_SKOgyrEAB8eoz4VMGXamWYWk3zrnFiZmMbRSE200ueBCLPTeU7WHVRAFnG_ita" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Civil Engineers</h5>
+                        <p class="card-text">
+                            <i class="fa-solid fa-star" style="color: rgb(84, 88, 104);"></i>
+                            4.8 on avg.
+                        </p>
+                        <p>$ 55/hr+</p>
+                    </div>
+                </div>
+            </a>
+           
+        </div>
+        </div>
+    </div>
+        </section>
+
+
+        </section>
+      
+        <!-- Row 1 -->
+        <!-- <div class="row g-4 "  id="reduceHight">      
+            <a class="Border  col col-lg-2 col-md-4 col-sm-6" onclick="showImg(event); whenClick()" >
+                <div>
+                    <i class="fa-brands fa-screenpal"></i>
+                    <p>AI Services</p>
+                </div>
+            </a>
+            <a class="Border col col-lg-2 col-md-4 col-sm-6" href="#IMG_2" onclick="showImg_2(event); whenClick()" >
+                <div>
+                  <i class="fa-solid fa-code" ></i>
+                    <p>Development & IT</p>
+                </div>
+            </a>
+            <a class="Border col col-lg-2 col-md-4 col-sm-6" href="#IMG" onclick="showImg(event); whenClick()">
+                <div>
+                   <i class="fa-solid fa-palette"></i>
+                    <p>Design & Creative</p>
+                </div>
+            </a>
+            <a class="Border col col-lg-2 col-md-4 col-sm-6" href="#IMG" onclick="showImg_2(event); whenClick()" >
+                <div>
+                    <i class="fa-regular fa-handshake" ></i>
+                    <p>Sales & Marketing</p>
+                </div>
+            </a>
+            <a class="Border col col-lg-2 col-md-4 col-sm-6" href="#IMG" onclick="showImg(event); whenClick()" >
+                <div>
+                   <i class="fa-solid fa-pen-nib"></i>
+                    <p>Writing & Translation</p>
+                </div>
+            </a>
+
+            <a class="Border col col-lg-2 col-md-4 col-sm-6" href="#IMG" onclick="showImg_2(event); whenClick()">
+                <div>
+                    <i class="fa-solid fa-user-tie" ></i>
+                    <p>Admin & Support</p>
+                </div>
+            </a>
+            <a class="Border col col-lg-2 col-md-4 col-sm-6" href="#IMG" onclick="showImg(event); whenClick()">
+                <div>
+                    <i class="fa-solid fa-landmark" ></i>
+                    <p>Finance & Accounting</p>
+                </div>
+            </a> 
+            <a class="Border col col-lg-2 col-md-4 col-sm-6" href="#IMG" onclick="showImg_2(event); whenClick()">
+                <div>
+                    <i class="fa-solid fa-scale-balanced"></i>
+                    <p>Legal</p>
+                </div>
+            </a>
+            <a class="Border col col-lg-2 col-md-4 col-sm-6" href="#IMG" onclick="showImg_2(event); whenClick()">
+                <div>
+                   <i class="fa-solid fa-user-group" ></i>
+                    <p>HR & Training</p>
+                </div>
+            </a>
+            <a class="Border col col-lg-2 col-md-12 col-sm-6" href="#IMG" onclick="showImg(event); whenClick()">
+                <div>
+                    <i class="fa-solid fa-screwdriver-wrench" ></i>
+                    <p>Engineering & Architecture</p>
+                </div>
+            </a>
+        </div> -->
+     
+            </div>
+
+            
+   
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer mt-4 d-flex justify-content-center" style="width: 100%;">
+      <div class="foot">
+        <div class="footer-grid">
+          <div class="column">
+            <h4>For Clients</h4>
+            <ul>
+              <li>How to hire</li>
+              <li>Talent Marketplace</li>
+              <li>Project Catalog</li>
+              <li>Hire an agency</li>
+              <li>Enterprise</li>
+              <li>Business Plus</li>
+              <li>Any Hire</li>
+            </ul>
+          </div>
+          <div class="column">
+            <h4>For Talent</h4>
+            <ul>
+              <li>How to find work</li>
+              <li>Direct Contracts</li>
+              <li>Find jobs worldwide</li>
+              <li>Win work with ads</li>
+            </ul>
+          </div>
+          <div class="column">
+            <h4>Resources</h4>
+            <ul>
+              <li>Help & support</li>
+              <li>Success stories</li>
+              <li>Blog</li>
+              <li>Affiliate programme</li>
+            </ul>
+          </div>
+          <div class="column">
+            <h4>Company</h4>
+            <ul>
+              <li class="highlight">About us</li>
+              <li class="highlight">Leadership</li>
+              <li class="highlight">Careers</li>
+              <li class="highlight">Press</li>
+            </ul>
+          </div>
+        </div>
+        <div class="social"> <span>Follow us</span>
+          <div class="icons"> <i>F</i> <i>in</i> <i>X</i> <i>YT</i> </div>
+        </div>
+        <div class="bottom">
+          <p> 2020 - 2026 SkillBridge </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Chat -->
+
+
+
+
+<button class="chat-btn" onclick="toggleChat()">
+         <i class="fa-solid fa-robot" style="color:#e1b055;"></i>
+    </button>
+
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <div class="user-info">
+                <div class="avatar">AI</div>
+                <div>
+                    <h4>SkillBridge Assistant</h4>
+                    <small>Online | Ready to help</small>
+                </div>
+            </div>
+            <button class="close-btn" onclick="toggleChat()">&times;</button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                Welcome to SkillBridge! Are you looking for talented graduates or starting your freelance journey?
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type your message here...">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane" style="font-size: 10px;"></i></button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+    
+    <button class="chatAi">
+      <i class="fa-solid fa-robot"></i>
+    </button> -->
+
+  </div> 
+
+<script src="../js/script.js">
+
+   
+
+</script>
+ 
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</div>
+</body>
+
+</html>
+
+
+
+
+ 

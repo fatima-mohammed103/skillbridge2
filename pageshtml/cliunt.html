@@ -1,0 +1,339 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge</title>
+
+  <link rel="stylesheet" href="../csspags/style.css">
+  <script src="https://kit.fontawesome.com/ca825dfbdd.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../csspags/cliunt.css">
+</head>
+
+<body>
+<div class="parent-container">
+
+<nav class="main-nav">
+  <div class="nav-container">
+      
+    <div class="nav-left">
+      <button class="menu-btn" onclick="openMenu()">☰</button>
+ <a href="../index.html" class="brand"><img src="/imags/download.png" alt="" style="width: 210px;"></a>
+        
+
+    <ul class="nav-links">
+      <li><a href="#freelancers"id="">Find Freelancer</a></li>
+      <li><a href="/pageshtml/create.html">Explore Projects</a></li>
+      <li><a href="/pageshtml/dashbord.html">Dashborad</a></li>
+      <li class="dropdown">
+        <a href="#" id="link-more" >More ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/pageshtml/profile.html">Profile</a></li>
+          <li><a href="/pageshtml/ranking.html">Ranking</a></li>
+          <li><a href="/pageshtml/pageteam.html"> Team Page</a></li>
+          <li><a href="/pageshtml/loction.html">Loction</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div> 
+    <div class="nav-right">
+      <!-- <div class="search-box">
+        <input type="search" placeholder="Search a talent..." class="search-input" />
+        <button class="search-icon">🔍</button>
+      </div>
+       -->
+    <button class="lang-btn lang-btn-desktop" onclick="toggleLanguage()">AR</button>
+<!-- 
+      <div class="auth-buttons">
+        <a class="login">Log In</a> -->
+        
+        <a class="nav-signup-btn" href="signup.html">Sign Up</a>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+  <div id="overlay" onclick="closeMenu()"></div>
+
+  <div id="sideMenu">
+    <div class="side-header">
+      <a href="../index.html" class="side-brand">
+        <img src="/imags/download.png" alt="Logo">
+      </a>
+      <button class="close-btn" onclick="closeMenu()"><i class="fa-solid fa-x" style="color: #075e94;"></i></button>
+    </div>
+    
+    <div class="side-links">
+      <a href="#freelancers"><i class="fa-solid fa-magnifying-glass" style="font-size: 15px;"></i> <span class="txt-find">Find Freelancer</span></a>
+      <a href="/pageshtml/profile.html"><i class="fa-solid fa-briefcase"style="font-size: 15px;" ></i> <span class="txt-work">Profile</span></a>
+      <a href="/pageshtml/create.html"><i class="fa-solid fa-users" style="font-size: 15px;"></i> <span class="txt-team">Explore Projects</span></a></a>
+      <a href="/pageshtml/pageteam.html"><i class="fa-solid fa-users" style="font-size: 15px;"></i> <span class="txt-team">Team Page</span></a>
+      <a href="/pageshtml/dashbord.html"><i class="fas fa-chart-line"></i><span class="txt-team">Dashborad</span></a>
+      <a href="/pageshtml/ranking.html"> <i class="fas fa-podium"></i><span class="txt-team">Ranking</span></a>
+      <a href="/pageshtml/loction.html"><i class="fas fa-map-marked-alt"></i><span class="txt-team">Loction</span></a>
+      <hr>
+      <a href="#" class="lang-btn" onclick="toggleLanguage()">
+        <i class="fa-solid fa-globe" style="font-size: 15px;"></i> <span class="txt-lang-toggle">Language: English</span>
+      </a>
+    </div>
+
+    <div class="side-auth">
+      <a href="#" class="side-login">Log In</a>
+      <a href="signup.html" class="side-signup" style="color: white;">Sign Up</a>
+    </div>
+  </div>
+</div> 
+
+
+
+
+
+
+
+
+
+
+    <main >
+   <div class="main-content">
+        
+        <section class="card profile-card">
+            <h2>Client Profile</h2>
+            <div class="profile-info">
+                <div class="profile-img-container">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.7Gd9vj-_c-jOORwM6J3SHQHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.3&o=7&rm=3" alt="Ahmed S.">
+                </div>
+                <div class="profile-details">
+                    <h1>Eslam Mohammed</h1>
+                    <p>Hiring Manager</p>
+                    <button class="btn-edit">Edit Profile</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="bottom-grid">
+            <section class="card">
+                <div class="card-header">
+                    <h3>Purchased Projects</h3>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Project Title</th>
+                            <th>Completed</th>
+                            <th>Status</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="project-title">
+                                <strong>React Dashboard</strong>
+                                <small>React Dashboard</small>
+                            </td>
+                            <td>06/1/2025</td>
+                            <td><button class="btn-view">View Delivery</button></td>
+                        </tr>
+                        <tr>
+                            <td class="project-title">
+                                <strong>Foriana Design</strong>
+                                <small>Completed Date</small>
+                            </td>
+                            <td>06/5/2025</td>
+                            <td><button class="btn-view">View Delivery</button></td>
+                        </tr>
+                        <tr>
+                            <td class="project-title">
+                                <strong>Landing Page</strong>
+                                <small>Completed Date</small>
+                            </td>
+                            <td>03/09/2025</td>
+                            <td><button class="btn-view">View Delivery</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="card">
+                <div class="card-header">
+                    <h3>Featured Talent Matches</h3>
+                </div>
+                <div class="talent-list">
+                    <div class="talent-item">
+                        <img src="https://tse1.mm.bing.net/th/id/OIP.SS7J-zx_gJkmB10XG_pL0QHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" class="talent-avatar" alt="Sarah">
+                        <div class="talent-info">
+                            <h4>Sarah Jalal <span class="active-tag">✓ Active</span></h4>
+                            <p>Skills: Python/Data</p>
+                            <p>Rating: <span class="rating">★</span> 4.0</p>
+                            <button class="btn-profile">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="talent-item">
+                        <img src="https://tse4.mm.bing.net/th/id/OIP.Ne71fjPWPH0WyPG4xqur8gHaNJ?pid=ImgDet&w=184&h=325&c=7&dpr=1.3&o=7&rm=3" class="talent-avatar" alt="Ahmed">
+                        <div class="talent-info">
+                            <h4>Ahmed Ramadan <span class="active-tag">✓ Active</span></h4>
+                            <p>Skills: React/JS</p>
+                            <p>Rating: <span class="rating">★</span> 4.5</p>
+                            <button class="btn-profile">View Profile</button>
+                        </div>
+                    </div>
+                    <div class="talent-item">
+                        <img src="https://tse2.mm.bing.net/th/id/OIP.nRwIv5SLxhy9cdjt7hlewQHaHa?pid=ImgDet&w=184&h=184&c=7&dpr=1.3&o=7&rm=3" class="talent-avatar" alt="Mona">
+                        <div class="talent-info">
+                            <h4>Mona Ahmed<span class="active-tag">✓ Active</span></h4>
+                            <p>Skills: UI/UX Designer</p>
+                            <p>Rating: <span class="rating">★</span> 4.8</p>
+                            <button class="btn-profile">View Profile</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+   </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+<button class="chat-btn" onclick="toggleChat()">
+         <i class="fa-solid fa-robot" style="color:#e1b055;"></i>
+        
+    </button>
+
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <div class="user-info">
+                <div class="avatar">AI</div>
+                <div>
+                    <h4>SkillBridge Assistant</h4>
+                    <small>Online | Ready to help</small>
+                </div>
+            </div>
+            <button class="close-btn" onclick="toggleChat()">&times;</button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                Welcome to SkillBridge! Are you looking for talented graduates or starting your freelance journey?
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type your message here...">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+<script>
+function openMenu() {
+    document.getElementById("sideMenu").classList.add("active");
+    document.getElementById("overlay").classList.add("active");
+  }
+
+  function closeMenu() {
+    document.getElementById("sideMenu").classList.remove("active");
+    document.getElementById("overlay").classList.remove("active");
+
+  }
+/////////////////////////////////
+
+function toggleLanguage() {
+    const html = document.documentElement;
+    const isEn = html.getAttribute('lang') === 'en';
+    
+    if (isEn) {
+        html.setAttribute('lang', 'ar');
+        html.setAttribute('dir', 'rtl');
+        updateContent('ar');
+    } else {
+        html.setAttribute('lang', 'en');
+        html.setAttribute('dir', 'ltr');
+        updateContent('en');
+    }
+}
+
+function updateContent(lang) {
+    const data = {
+        'en': {
+            'find': 'Find Freelancer',
+            'team': 'Team Page',
+            'dash': 'Dashboard',
+            'more': 'More ▾',
+            'signup': 'Sign Up',
+            'login': 'Log In',
+            'langBtn': 'AR',
+            'langToggle': 'Language: English'
+        },
+        'ar': {
+            'find': 'ابحث عن مستقل',
+            'team': 'صفحة الفريق',
+            'dash': 'لوحة التحكم',
+            'more': 'المزيد ▾',
+            'signup': 'إنشاء حساب',
+            'login': 'دخول',
+            'langBtn': 'EN',
+            'langToggle': 'اللغة: العربية'
+        }
+    };
+
+    document.getElementById('link-find').innerText = data[lang].find;
+    document.getElementById('link-team').innerText = data[lang].team;
+    document.getElementById('link-dash').innerText = data[lang].dash;
+    document.getElementById('link-more').innerText = data[lang].more;
+    
+    // أزرار الحساب
+    document.querySelector('.nav-signup-btn').innerText = data[lang].signup;
+    document.querySelector('.side-signup').innerText = data[lang].signup;
+    document.querySelector('.side-login').innerText = data[lang].login;
+
+    // أزرار اللغة
+    document.querySelector('.lang-btn-desktop').innerText = data[lang].langBtn;
+    document.querySelector('.txt-lang-toggle').innerText = data[lang].langToggle;
+    
+    closeMenu();
+}</script>
+     <script src="js/bootstrap.bundle.min.js"></script>
+     <script src="../js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

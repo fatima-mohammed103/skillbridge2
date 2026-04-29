@@ -1,0 +1,644 @@
+
+ <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillBridge - Profile</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./css/dashboard.css" />
+  <link rel="stylesheet" href="./css/team.css" />
+  <link rel="stylesheet" href="./css/profile.css" />
+  <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="stylesheet" href="../csspags/style.css">
+  <style>
+   /* Profile Specific CSS */
+.profile-cover {
+  height: 250px;
+  background: var(--grad-blue);
+  border-radius: 20px 20px 0 0;
+  position: relative;
+  overflow: hidden;
+}
+.profile-cover::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(20, 39, 102, 0.4), rgba(141, 119, 74, 0.4));
+  z-index: 1;
+}
+.profile-header-card {
+  margin-top: -100px;
+  position: relative;
+  z-index: 2;
+  border-radius: 20px;
+  background: var(--card-bg);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  padding: 30px;
+  text-align: center;
+}
+.profile-avatar-container {
+  margin-top: -80px;
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+}
+.profile-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  object-fit: cover;
+  background-color: #fff;
+}
+.availability-badge {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #81c784;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+.profile-name {
+  color: var(--text-dark);
+  font-weight: 800;
+  font-size: 1.8rem;
+  margin-bottom: 5px;
+}
+.profile-title {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.profile-stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 25px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 15px 0;
+}
+.profile-stat {
+  text-align: center;
+}
+.profile-stat-value {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #142766;
+}
+.profile-stat-label {
+  font-size: 0.85rem;
+  color: gray;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 600;
+}
+.profile-action-btns {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.btn-hire {
+  background-color: #075e94;
+  color: white;
+  border-radius: 12px;
+  padding: 10px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-hire:hover {
+  background-color: #142766;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(20, 39, 102, 0.2);
+}
+.btn-message {
+  background-color: #eef6ff;
+  color: #075e94;
+  border-radius: 12px;
+  padding: 10px 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+.btn-message:hover {
+  background-color: #d4e6ff;
+  color: #142766;
+  transform: translateY(-2px);
+}
+/* Skills Badges */
+.skill-badge {
+  background-color: #f1f3f5;
+  color: #142766;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+.skill-badge:hover {
+  background-color: #eef6ff;
+  color: #075e94;
+}
+/* Portfolio Items */
+.portfolio-item {
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  background-color: #fff;
+  height: 100%;
+}
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+.portfolio-img {
+  height: 160px;
+  width: 100%;
+  object-fit: cover;
+  background-color: #f8fbff;
+}
+.portfolio-content {
+  padding: 15px;
+}
+.portfolio-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #142766;
+}
+.portfolio-desc {
+  font-size: 0.9rem;
+  color: gray;
+  margin-bottom: 0;
+}
+/* Review Item */
+.review-item {
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.review-item:last-child {
+  border-bottom: none;
+}
+.review-text {
+  font-style: italic;
+  color: gray;
+  font-size: 0.95rem;
+  margin-bottom: 10px;
+}
+.reviewer-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #142766;
+}
+.star-rating {
+  color: #fbc02d;
+  font-size: 0.85rem;
+}
+/* Chat Widget Styling */
+.chat-widget {
+  position: fixed;
+  bottom: 20px;
+  inset-inline-end: 20px; /* Logical right/left for RTL support */
+  width: 320px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  z-index: 1050;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+.chat-header {
+  background: linear-gradient(135deg, #142766, #075e94);
+  padding: 15px;
+  color: white;
+}
+.chat-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.3);
+}
+.chat-body {
+  height: 280px;
+  padding: 15px;
+  overflow-y: auto;
+  background: #f8fbff;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.chat-message {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 15px;
+  font-size: 0.9rem;
+  position: relative;
+  line-height: 1.4;
+}
+.chat-message.received {
+  background: #fff;
+  color: #142766;
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border: 1px solid rgba(0,0,0,0.02);
+}
+html[dir="rtl"] .chat-message.received {
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 2px;
+}
+.chat-message.sent {
+  background: #075e94;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+  box-shadow: 0 2px 8px rgba(7, 94, 148, 0.2);
+}
+html[dir="rtl"] .chat-message.sent {
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 2px;
+}
+.chat-message p {
+  margin-bottom: 4px;
+}
+.chat-time {
+  font-size: 0.65rem;
+  opacity: 0.7;
+  display: block;
+  text-align: end; /* Logical right alignment */
+}
+.chat-footer {
+  padding: 12px;
+  background: #fff;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+.chat-footer .form-control {
+  border-radius: 20px 0 0 20px;
+  font-size: 0.9rem;
+}
+html[dir="rtl"] .chat-footer .form-control {
+  border-radius: 0 20px 20px 0;
+}
+.chat-footer .btn-primary {
+  border-radius: 0 20px 20px 0;
+  padding: 0 18px;
+}
+html[dir="rtl"] .chat-footer .btn-primary {
+  border-radius: 20px 0 0 20px;
+}
+
+
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+  <div class="parent-container">
+    <nav class="main-nav">
+      <div class="nav-container">
+        <div class="nav-left">
+          <button class="menu-btn" onclick="openMenu()">☰</button>
+          <a href="index.html" class="brand"><img src="images/skill.png" alt="Logo"
+              style="max-height: 70px; width: auto; mix-blend-mode: multiply; transform: scale(1.2);"></a>
+          <ul class="nav-links">
+            <li><a href="#freelancers" id="link-find">Find Freelancer</a></li>
+            <li><a href="team.html" id="link-team">Team Page</a></li>
+            <li><a href="dashboard.html" id="link-dash">Dashboard</a></li>
+            <li class="dropdown">
+              <a href="#" id="link-more">More ▾</a>
+              <ul class="dropdown-menu">
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="ranking.html">Ranking</a></li>
+                <li><a href="#">Explore Ideas</a></li>
+                <li><a href="loction.html">Location</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-right">
+          <div class="search-box">
+            <input type="search" placeholder="Search a talent..." class="search-input" />
+            <button class="search-icon">🔍</button>
+          </div>
+          <button class="lang-btn lang-btn-desktop" onclick="toggleLanguage()">AR</button>
+          <a class="nav-signup-btn">Sign Up</a>
+        </div>
+      </div>
+    </nav>
+    <div id="overlay" onclick="closeMenu()"></div>
+    <div id="sideMenu">
+      <div class="side-header">
+        <a href="index.html" class="side-brand">
+          <img src="./images/skill.png" alt="Logo">
+        </a>
+        <button class="close-btn" onclick="closeMenu()"><i class="fa-solid fa-x" style="color: #075e94;"></i></button>
+      </div>
+      <div class="side-links">
+        <a href="#freelancers"><i class="fa-solid fa-magnifying-glass" style="font-size: 15px;"></i> <span
+            class="txt-find">Find Freelancer</span></a>
+        <a href="profile.html"><i class="fa-solid fa-briefcase" style="font-size: 15px;"></i> <span
+            class="txt-work">Profile</span></a>
+        <a href="team.html"><i class="fa-solid fa-users" style="font-size: 15px;"></i> <span class="txt-team">Team
+            Page</span></a>
+        <a href="dashboard.html"><i class="fa-solid fa-gauge" style="font-size: 15px;"></i> <span
+            class="txt-dash">Dashboard</span></a>
+        <a href="loction.html"><i class="fa-solid fa-location-dot" style="font-size: 15px;"></i> <span
+            class="txt-location">Location</span></a>
+        <a href="ranking.html"><i class="fa-solid fa-ranking-star" style="font-size: 15px;"></i> <span
+            class="txt-ranking">Ranking</span></a>
+        <hr>
+        <a href="#" class="lang-btn" onclick="toggleLanguage()">
+          <i class="fa-solid fa-globe" style="font-size: 15px;"></i> <span class="txt-lang-toggle">Language:
+            English</span>
+        </a>
+      </div>
+      <div class="side-auth">
+        <a href="#" class="side-login">Log In</a>
+        <a href="#" class="side-signup" style="color: white;">Sign Up</a>
+      </div>
+    </div>
+  </div>
+  <div class="container py-5 flex-grow-1">
+    
+    <!-- Profile Header Section -->
+    <div class="row mb-5">
+      <div class="col-12">
+        <div class="profile-cover shadow-sm">
+          <!-- Cover Background -->
+        </div>
+        <div class="profile-header-card mx-auto" style="max-width: 95%;">
+          <div class="profile-avatar-container">
+            <img src="https://i.pinimg.com/736x/5b/10/e8/5b10e8f625506e6725bc58f8d27ef268.jpg" alt="Profile Avatar" class="profile-avatar">
+            <span class="availability-badge" title="Available for work"></span>
+          </div>
+          <h1 class="profile-name">Karim Youssef</h1>
+          <p class="profile-title">Senior Fullstack Developer <i class="fa-solid fa-circle-check text-primary" style="font-size: 0.9rem;" title="Verified"></i></p>
+          <p class="text-muted mb-4"><i class="fa-solid fa-location-dot me-2"></i> Cairo, Egypt</p>
+          
+          <div class="profile-stats-container">
+            <div class="profile-stat">
+              <div class="profile-stat-value">4.8 <i class="fa-solid fa-star text-warning" style="font-size: 1.1rem;"></i></div>
+              <div class="profile-stat-label">Rating</div>
+            </div>
+            <div class="profile-stat">
+              <div class="profile-stat-value">15</div>
+              <div class="profile-stat-label">Projects</div>
+            </div>
+            <div class="profile-stat">
+              <div class="profile-stat-value">3.5k $</div>
+              <div class="profile-stat-label">Earnings</div>
+            </div>
+            <div class="profile-stat">
+              <div class="profile-stat-value">$35</div>
+              <div class="profile-stat-label">Hourly Rate</div>
+            </div>
+          </div>
+          <div class="profile-action-btns">
+            <button class="btn btn-hire"><i class="fa-solid fa-briefcase me-2"></i> Hire Me</button>
+            <button class="btn btn-message" onclick="toggleChatWidget()"><i class="fa-regular fa-comment-dots me-2"></i> Message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Main Profile Content Grid -->
+    <div class="row g-4 mb-5">
+      
+      <!-- Left Column -->
+      <div class="col-lg-4">
+        <!-- About Me -->
+        <div class="card modern-card p-4 mb-4">
+          <h5 class="fw-bold section-title mb-4">About Me</h5>
+          <p class="text-muted" style="line-height: 1.7; font-size: 0.95rem;">
+            Hello! I'm Karim, a passionate Fullstack Developer with over 5 years of experience in building scalable web applications. I specialize in the MERN stack and modern frontend frameworks. My goal is to deliver high-quality, performant, and user-friendly solutions.
+          </p>
+          <hr class="my-4" style="border-color: rgba(0,0,0,0.05);">
+          <ul class="list-unstyled text-muted" style="font-size: 0.95rem;">
+            <li class="mb-3"><i class="fa-solid fa-globe me-3 text-team-primary" style="width: 20px;"></i> English (Fluent), Arabic (Native)</li>
+            <li class="mb-3"><i class="fa-solid fa-graduation-cap me-3 text-team-primary" style="width: 20px;"></i> B.Sc. Computer Engineering</li>
+            <li class="mb-3"><i class="fa-solid fa-clock me-3 text-team-primary" style="width: 20px;"></i> > 30 hrs/week</li>
+          </ul>
+        </div>
+        <!-- Skills -->
+        <div class="card modern-card p-4">
+          <h5 class="fw-bold section-title mb-4">Skills</h5>
+          <div class="d-flex flex-wrap gap-2">
+            <span class="skill-badge">React.js</span>
+            <span class="skill-badge">Node.js</span>
+            <span class="skill-badge">MongoDB</span>
+            <span class="skill-badge">Express</span>
+            <span class="skill-badge">TypeScript</span>
+            <span class="skill-badge">Tailwind CSS</span>
+            <span class="skill-badge">PostgreSQL</span>
+            <span class="skill-badge">Docker</span>
+            <span class="skill-badge">GraphQL</span>
+          </div>
+        </div>
+      </div>
+      <!-- Right Column -->
+      <div class="col-lg-8">
+        
+        <!-- Portfolio -->
+        <div class="card modern-card p-4 mb-4">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h5 class="fw-bold section-title mb-0">Portfolio</h5>
+            <a href="#" class="btn btn-sm btn-outline-secondary rounded-pill px-3">View All</a>
+          </div>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Project 1" class="portfolio-img">
+                <div class="portfolio-content">
+                  <h3 class="portfolio-title">E-commerce Dashboard</h3>
+                  <p class="portfolio-desc">A full-featured admin panel built with React and Node.js for tracking sales and inventory.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Project 2" class="portfolio-img">
+                <div class="portfolio-content">
+                  <h3 class="portfolio-title">Healthcare App UI</h3>
+                  <p class="portfolio-desc">Modern and accessible UI design for a tele-medicine patient portal.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Reviews -->
+        <div class="card modern-card p-4">
+          <h5 class="fw-bold section-title mb-4">Recent Reviews</h5>
+          
+          <div class="review-item">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <div class="reviewer-name">Ahmed H.</div>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+            </div>
+            <p class="review-text">"Karim delivered the project ahead of schedule and the code quality was exceptional. Highly recommended for any complex web application needs."</p>
+            <small class="text-muted">E-commerce Portal Development - Oct 2025</small>
+          </div>
+          <div class="review-item">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <div class="reviewer-name">Sarah M.</div>
+              <div class="star-rating">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+              </div>
+            </div>
+            <p class="review-text">"Great communication and understood our requirements perfectly. Will definitely hire again for future phases."</p>
+            <small class="text-muted">Cloud Migration Consulting - Aug 2025</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Chat Widget -->
+  <div class="chat-widget d-none" id="chatWidget">
+    <div class="chat-header d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <img src="https://i.pravatar.cc/300?img=47" alt="Karim" class="chat-avatar me-2">
+        <div>
+          <h6 class="mb-0 text-white" style="font-size: 0.95rem;">Karim Youssef</h6>
+          <small style="color: #a5d6a7; font-size: 0.75rem;"><span class="status-dot dot-working d-inline-block" style="width: 8px; height: 8px;"></span> Online</small>
+        </div>
+      </div>
+      <button class="btn text-white p-0 m-0" onclick="toggleChatWidget()"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="chat-body" id="chatBody">
+      <div class="chat-message received">
+        <p>Hello! Thanks for reaching out. How can I help you with your project?</p>
+        <span class="chat-time">10:30 AM</span>
+      </div>
+    </div>
+    <div class="chat-footer">
+      <div class="input-group">
+        <input type="text" class="form-control" id="chatInput" placeholder="Type your message..." onkeypress="handleChatEnter(event)">
+        <button class="btn btn-primary" style="background-color: #075e94; border-color: #075e94;" onclick="sendChatMessage()"><i class="fa-solid fa-paper-plane"></i></button>
+      </div>
+    </div>
+  </div>
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function openMenu() {
+      document.getElementById("sideMenu").classList.add("active");
+      document.getElementById("overlay").classList.add("active");
+    }
+    function closeMenu() {
+      document.getElementById("sideMenu").classList.remove("active");
+      document.getElementById("overlay").classList.remove("active");
+    }
+    function toggleLanguage() {
+      const html = document.documentElement;
+      const isEn = html.getAttribute('lang') === 'en';
+      if (isEn) {
+        html.setAttribute('lang', 'ar');
+        html.setAttribute('dir', 'rtl');
+        updateContent('ar');
+      } else {
+        html.setAttribute('lang', 'en');
+        html.setAttribute('dir', 'ltr');
+        updateContent('en');
+      }
+    }
+    function updateContent(lang) {
+      const data = {
+        'en': {
+          'find': 'Find Freelancer',
+          'team': 'Team Page',
+          'dash': 'Dashboard',
+          'more': 'More ▾',
+          'signup': 'Sign Up',
+          'login': 'Log In',
+          'langBtn': 'AR',
+          'langToggle': 'Language: English'
+        },
+        'ar': {
+          'find': 'ابحث عن مستقل',
+          'team': 'صفحة الفريق',
+          'dash': 'لوحة التحكم',
+          'more': 'المزيد ▾',
+          'signup': 'إنشاء حساب',
+          'login': 'دخول',
+          'langBtn': 'EN',
+          'langToggle': 'اللغة: العربية'
+        }
+      };
+      document.getElementById('link-find').innerText = data[lang].find;
+      document.getElementById('link-team').innerText = data[lang].team;
+      document.getElementById('link-dash').innerText = data[lang].dash;
+      document.getElementById('link-more').innerText = data[lang].more;
+      document.querySelector('.nav-signup-btn').innerText = data[lang].signup;
+      document.querySelector('.side-signup').innerText = data[lang].signup;
+      document.querySelector('.side-login').innerText = data[lang].login;
+      document.querySelector('.lang-btn-desktop').innerText = data[lang].langBtn;
+      document.querySelector('.txt-lang-toggle').innerText = data[lang].langToggle;
+      closeMenu();
+    }
+    // Chat Widget Functions
+    function toggleChatWidget() {
+      const widget = document.getElementById('chatWidget');
+      widget.classList.toggle('d-none');
+      if (!widget.classList.contains('d-none')) {
+        document.getElementById('chatInput').focus();
+      }
+    }
+    function sendChatMessage() {
+      const input = document.getElementById('chatInput');
+      const message = input.value.trim();
+      if (message) {
+        const chatBody = document.getElementById('chatBody');
+        const time = new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
+        
+        const msgDiv = document.createElement('div');
+        msgDiv.className = 'chat-message sent';
+        msgDiv.innerHTML = `<p>${message}</p><span class="chat-time">${time}</span>`;
+        
+        chatBody.appendChild(msgDiv);
+        input.value = '';
+        chatBody.scrollTop = chatBody.scrollHeight;
+        
+        // Simulate a reply
+        setTimeout(() => {
+          const replyDiv = document.createElement('div');
+          replyDiv.className = 'chat-message received';
+          replyDiv.innerHTML = `<p>I will get back to you shortly!</p><span class="chat-time">${new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>`;
+          chatBody.appendChild(replyDiv);
+          chatBody.scrollTop = chatBody.scrollHeight;
+        }, 1500);
+      }
+    }
+    function handleChatEnter(event) {
+      if (event.key === 'Enter') {
+        sendChatMessage();
+      }
+    }
+  </script>
+</body>
+</html>

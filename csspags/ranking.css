@@ -1,0 +1,311 @@
+
+.ranking{margin-top: 60px;}
+
+
+.container h2 {
+  font-weight: 700;
+  color: #075e94;
+  margin-top: 60px;
+}
+.timing ul {
+  color: #142766;
+  list-style: none;
+  gap: 15px;
+  padding: 0;
+}
+.timing ul li {
+  background-color: aliceblue;
+  border-radius: 50px;
+  font-size: 15px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.rank1 {
+  color: gold;
+}
+.rank2 {
+  color: silver;
+}
+.rank3 {
+  color: #CD7F32
+}
+/* Generic Role Badge Base */
+.dev-badge {
+  font-size: 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin: 0;
+  background: rgba(32, 35, 42, 0.9);
+}
+.dev-badge i {
+  font-size: 14px;
+}
+.dev-badge:hover {
+  transform: translateY(-2px);
+}
+/* Specific Badges */
+.badge-react {
+  color: #61DBFB;
+  border: 1px solid rgba(97, 219, 251, 0.3);
+  box-shadow: 0 2px 8px rgba(97, 219, 251, 0.15);
+}
+.dropdown .btn {
+  background-color: #016fb9;
+  border-radius: 15px;
+}
+.filter li {
+  margin-bottom: 8px;
+  background-color: #FFF;
+}
+.filter li a {
+  margin-bottom: 3px;
+  padding: 0;
+  color: #016fb9;
+}
+/* تنسيق الكارت نفسه */
+.user-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: 0.3s;
+  border-left: 5px solid #016fb9;
+  /* خط جانبي جمالي */
+}
+.user-card:hover {
+  transform: scale(1.01);
+}
+/* صورة المستخدم */
+.user-avatar {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+/* رقم الترتيب */
+.rank-number {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #666;
+  min-width: 30px;
+}
+/* شريط التقدم */
+.custom-progress-container {
+  background-color: #eee;
+  border-radius: 10px;
+  height: 12px;
+  overflow: hidden;
+}
+.custom-progress-bar {
+  background: #41B883;
+  height: 100%;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  line-height: 12px;
+  border-radius: 10px;
+}
+/* النقاط */
+.user-points {
+  font-weight: bold;
+  color: #2c3e50;
+}
+/* Footer */
+.foot {
+  height: auto;
+  width: 98%;
+  border-radius: 12px;
+  background: #121212;
+  color: #ccc;
+  padding: 40px 20px;
+  margin: auto;
+}
+body {
+  margin: 0;
+  padding-top: 70px;
+  font-family: Arial, sans-serif;
+}
+/* .container {} */
+.column h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+.column ul {
+  list-style: none;
+  padding: 0;
+}
+.column ul li {
+  margin-bottom: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.column ul li:hover {
+  color: #fff;
+}
+.social {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.icons a i {
+  margin-right: 10px;
+  background: #222;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.icons a:last-child i {
+  margin-right: 0;
+}
+.icons a i:hover {
+  background: #075e94;
+  transform: translateY(-3px);
+}
+.bottom {
+  margin-top: 30px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.links span {
+  margin-left: 15px;
+  cursor: pointer;
+}
+@media (max-width: 992px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.social {
+  flex-direction: column;
+  gap: 10px;
+}
+.bottom {
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+}
+/* Chat Button */
+.chatAi {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #016fb9;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Your Rank Card Styling */
+.your-rank-card {
+  background: #016fb9;
+  border-radius: 16px;
+  padding: 20px 30px;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 35px;
+  box-shadow: 0 8px 25px rgba(20, 39, 102, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+/* Subtle glow effect behind the card */
+.your-rank-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, rgba(194, 150, 74, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  z-index: 0;
+}
+.your-rank-card>* {
+  position: relative;
+  z-index: 1;
+}
+.your-rank-card h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+}
+.your-rank-card h3 i {
+  color: #c2964a;
+  font-size: 1.8rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+}
+.your-rank-card .rank-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
+}
+.your-rank-card .rank-number {
+  color: #c2964a !important;
+  font-size: 1.8rem !important;
+  font-weight: 800;
+  min-width: unset !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+.your-rank-card .rank-xp {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #e0e0e0;
+  letter-spacing: 0.5px;
+}
+@media (max-width: 576px) {
+  .your-rank-card {
+    width: 500px;
+  }
+  .user-card {
+    width: 500px;
+  }
+  .user-name {
+    font-size: 20px;
+  }
+  .user-role {
+    font-size: 14px;
+  }
+  /* .view-profile-btn {
+    font-size: 5px;
+    padding: 4px 12px;
+    border-radius: 20px;
+  } */
+}

@@ -1,0 +1,666 @@
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge</title>
+
+  <link rel="stylesheet" href="../csspags/style.css">
+  <script src="https://kit.fontawesome.com/ca825dfbdd.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="../csspags/dashborad.css">
+</head>
+
+<body>
+<div class="parent-container">
+
+
+<nav class="main-nav">
+  <div class="nav-container">
+      
+    <div class="nav-left">
+      <button class="menu-btn" onclick="openMenu()">☰</button>
+ <a href="../index.html" class="brand"><img src="/imags/download.png" alt="" style="width: 210px;"></a>
+        
+
+    <ul class="nav-links">
+      <li><a href="#freelancers"id="">Find Freelancer</a></li>
+      <li><a href="/pageshtml/create.html">Explore Projects</a></li>
+      <li><a href="/pageshtml/dashbord.html">Dashborad</a></li>
+      <li class="dropdown">
+        <a href="#" id="link-more" >More ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/pageshtml/profile.html">Profile</a></li>
+          <li><a href="/pageshtml/ranking.html">Ranking</a></li>
+          <li><a href="/pageshtml/pageteam.html"> Team Page</a></li>
+          <li><a href="/pageshtml/loction.html">Loction</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div> 
+    <div class="nav-right">
+      <!-- <div class="search-box">
+        <input type="search" placeholder="Search a talent..." class="search-input" />
+        <button class="search-icon">🔍</button>
+      </div>
+       -->
+    <button class="lang-btn lang-btn-desktop" onclick="toggleLanguage()">AR</button>
+<!-- 
+      <div class="auth-buttons">
+        <a class="login">Log In</a> -->
+        
+        <a class="nav-signup-btn" href="signup.html">Sign Up</a>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+  <div id="overlay" onclick="closeMenu()"></div>
+
+  <div id="sideMenu">
+    <div class="side-header">
+      <a href="../index.html" class="side-brand">
+        <img src="/imags/download.png" alt="Logo">
+      </a>
+      <button class="close-btn" onclick="closeMenu()"><i class="fa-solid fa-x" style="color: #075e94;"></i></button>
+    </div>
+    
+    <div class="side-links">
+      <a href="#freelancers"><i class="fa-solid fa-magnifying-glass" style="font-size: 15px;"></i> <span class="txt-find">Find Freelancer</span></a>
+      <a href="/pageshtml/profile.html"><i class="fa-solid fa-briefcase"style="font-size: 15px;" ></i> <span class="txt-work">Profile</span></a>
+      <a href="/pageshtml/create.html"><i class="fa-solid fa-users" style="font-size: 15px;"></i> <span class="txt-team">Explore Projects</span></a></a>
+      <a href="/pageshtml/pageteam.html"><i class="fa-solid fa-users" style="font-size: 15px;"></i> <span class="txt-team">Team Page</span></a>
+      <a href="/pageshtml/dashbord.html"><i class="fas fa-chart-line"></i><span class="txt-team">Dashborad</span></a>
+      <a href="/pageshtml/ranking.html"> <i class="fas fa-podium"></i><span class="txt-team">Ranking</span></a>
+      <a href="/pageshtml/loction.html"><i class="fas fa-map-marked-alt"></i><span class="txt-team">Loction</span></a>
+      <hr>
+      <a href="#" class="lang-btn" onclick="toggleLanguage()">
+        <i class="fa-solid fa-globe" style="font-size: 15px;"></i> <span class="txt-lang-toggle">Language: English</span>
+      </a>
+    </div>
+
+    <div class="side-auth">
+      <a href="#" class="side-login">Log In</a>
+      <a href="signup.html" class="side-signup" style="color: white;">Sign Up</a>
+    </div>
+  </div>
+</div> 
+
+<!-- dashborad -->
+
+
+ <div class="container py-5 flex-grow-1">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <div>
+        <h2 class="fw-bold section-title mb-1 fs-3">
+          Welcome back, Admin 👋
+        </h2>
+        <p class="sub-title  text-muted mb-0">
+          Here's what's happening with your team today.
+        </p>
+      </div>
+      <button class="btn cubtnstom- fw-bold border-0 shadow-sm px-4 py-2" style="border-radius: 12px">
+        <a href="#" class="fa-solid fa-plus me-2 "></a>New Project
+      </button>
+    </div>
+    <!-- 2. Stats Cards -->
+    <div class="row g-4 mb-5">
+      <!-- Card 1 -->
+      <div class="col-xl-3 col-sm-6">
+        <div class="card stat-card card-pastel-blue shadow-sm">
+          <div class="card-body p-4 d-flex align-items-center justify-content-between">
+            <div>
+              <div class="stat-title">Team Members</div>
+              <div class="stat-value">16</div>
+            </div>
+            <div class="icon-circle bg-light-blue">
+              <i class="fa-solid fa-users"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-xl-3 col-sm-6">
+        <div class="card stat-card card-pastel-green shadow-sm">
+          <div class="card-body p-4 d-flex align-items-center justify-content-between">
+            <div>
+              <div class="stat-title">Projects Completed</div>
+              <div class="stat-value">38</div>
+            </div>
+            <div class="icon-circle bg-light-green">
+              <i class="fa-solid fa-check-double"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-xl-3 col-sm-6">
+        <div class="card stat-card card-pastel-purple shadow-sm">
+          <div class="card-body p-4 d-flex align-items-center justify-content-between">
+            <div>
+              <div class="stat-title">Active Clients</div>
+              <div class="stat-value">35</div>
+            </div>
+            <div class="icon-circle bg-light-purple">
+              <i class="fa-solid fa-briefcase"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-xl-3 col-sm-6">
+        <div class="card stat-card card-pastel-yellow shadow-sm">
+          <div class="card-body p-4 d-flex align-items-center justify-content-between">
+            <div>
+              <div class="stat-title">Years of Experience</div>
+              <div class="stat-value">3+</div>
+            </div>
+            <div class="icon-circle bg-light-yellow">
+              <i class="fa-solid fa-award"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row g-4 mb-5">
+      <!-- 4. Roles Chart (Moved to left for better layout balance) -->
+      <div class="col-lg-4">
+        <div class="card modern-card h-100 p-4">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h5 class="fw-bold section-title mb-0">Role Distribution</h5>
+            <i class="fa-solid fa-ellipsis text-muted" style="cursor: pointer"></i>
+          </div>
+          <div class="card-body d-flex align-items-center justify-content-center p-0" style="height: 250px">
+            <!-- Pie Chart -->
+            <canvas id="rolesPieChart"></canvas>
+          </div>
+        </div>
+      </div>
+      <!-- 3. Team Status -->
+      <div class="col-lg-4">
+        <div class="card modern-card h-100 p-4">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h5 class="fw-bold section-title mb-0">Team Status</h5>
+            <a href="#" class="text-decoration-none text-muted small">View All</a>
+          </div>
+          <div class="card-body p-0">
+            <div class="status-item">
+              <img src="https://i.pravatar.cc/150?img=5" alt="Sarah" class="avatar me-3" />
+              <div class="flex-grow-1">
+                <h6 class="mb-0 fw-bold">Sarah Ahmed</h6>
+                <small class="text-muted">Frontend Developer</small>
+              </div>
+              <div>
+                <span class="status-dot dot-working"></span><span class="small fw-medium">Working</span>
+              </div>
+            </div>
+            <div class="status-item">
+              <img src="https://i.pravatar.cc/150?img=12" alt="Mona" class="avatar me-3" />
+              <div class="flex-grow-1">
+                <h6 class="mb-0 fw-bold">Mohmed Ali</h6>
+                <small class="text-muted">UI/UX Designer</small>
+              </div>
+              <div>
+                <span class="status-dot dot-available"></span><span class="small fw-medium">Available</span>
+              </div>
+            </div>
+            <div class="status-item">
+              <img src="https://i.pravatar.cc/150?img=8" alt="Omar" class="avatar me-3" />
+              <div class="flex-grow-1">
+                <h6 class="mb-0 fw-bold">Omar Khaled</h6>
+                <small class="text-muted">Backend Developer</small>
+              </div>
+              <div>
+                <span class="status-dot dot-working"></span><span class="small fw-medium">Working</span>
+              </div>
+            </div>
+            <div class="status-item">
+              <img src="https://i.pravatar.cc/150?img=33" alt="Tarek" class="avatar me-3" />
+              <div class="flex-grow-1">
+                <h6 class="mb-0 fw-bold">Tarek Hassan</h6>
+                <small class="text-muted">Project Manager</small>
+              </div>
+              <div>
+                <span class="status-dot dot-leave"></span><span class="small fw-medium">On Leave</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 6. Top Members -->
+      <div class="col-lg-4">
+        <div class="card modern-card h-100 p-4">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h5 class="fw-bold section-title mb-0">Top Performers</h5>
+            <i class="fa-solid fa-star text-warning"></i>
+          </div>
+          <div class="card-body p-0">
+            <div class="member-list-item mb-2">
+              <div class="d-flex align-items-center">
+                <img src="https://i.pravatar.cc/150?img=47" alt="Leo" class="avatar me-3"
+                  style="width: 40px; height: 40px" />
+                <div>
+                  <h6 class="mb-0 fw-bold">Karim Youssef</h6>
+                  <small class="text-muted">Fullstack Dev</small>
+                </div>
+              </div>
+              <div class="text-end">
+                <div class="fw-bold text-team-primary">15</div>
+                <small class="text-muted">Projects</small>
+              </div>
+            </div>
+            <div class="member-list-item mb-2">
+              <div class="d-flex align-items-center">
+                <img src="https://i.pravatar.cc/150?img=5" alt="Sarah" class="avatar me-3"
+                  style="width: 40px; height: 40px" />
+                <div>
+                  <h6 class="mb-0 fw-bold">Sarah Ahmed</h6>
+                  <small class="text-muted">Frontend Dev</small>
+                </div>
+              </div>
+              <div class="text-end">
+                <div class="fw-bold text-team-primary">12</div>
+                <small class="text-muted">Projects</small>
+              </div>
+            </div>
+            <div class="member-list-item mb-2">
+              <div class="d-flex align-items-center">
+                <img src="https://i.pravatar.cc/150?img=32" alt="Yasmine" class="avatar me-3"
+                  style="width: 40px; height: 40px" />
+                <div>
+                  <h6 class="mb-0 fw-bold">Yasmine Nabil</h6>
+                  <small class="text-muted">Data Analyst</small>
+                </div>
+              </div>
+              <div class="text-end">
+                <div class="fw-bold text-team-primary">9</div>
+                <small class="text-muted">Projects</small>
+              </div>
+            </div>
+            <div class="member-list-item">
+              <div class="d-flex align-items-center">
+                <img src="https://i.pravatar.cc/150?img=12" alt="Mona" class="avatar me-3"
+                  style="width: 40px; height: 40px" />
+                <div>
+                  <h6 class="mb-0 fw-bold">Mona Ali</h6>
+                  <small class="text-muted">UI/UX Designer</small>
+                </div>
+              </div>
+              <div class="text-end">
+                <div class="fw-bold text-team-primary">8</div>
+                <small class="text-muted">Projects</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Second Row -->
+    <div class="row g-4">
+      <!-- 5. Latest Projects -->
+      <div class="col-lg-8">
+        <div class="card modern-card h-100 p-4">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <h5 class="fw-bold section-title mb-0">Latest Projects</h5>
+            <button class="btn btn-sm btn-outline-secondary rounded-pill px-3">
+              View All
+            </button>
+          </div>
+          <div class="card-body p-0">
+            <div class="table-responsive">
+              <table class="table table-borderless align-middle mb-0">
+                <thead class="border-bottom">
+                  <tr>
+                    <th class="pb-3 px-0">Project Name</th>
+                    <th class="pb-3 text-center">Status</th>
+                    <th class="pb-3 text-center">Team Leads</th>
+                    <th class="pb-3">Completion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- Project 1 -->
+                  <tr>
+                    <td class="py-3 px-0">
+                      <div class="d-flex align-items-center">
+                        <div class="icon-circle bg-light-blue" style="width: 40px; height: 40px; font-size: 1rem">
+                          <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                        <div class="ms-3">
+                          <h6 class="mb-0 fw-bold">Medical App UI</h6>
+                          <small class="text-muted">Healthcare Client</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-center py-3">
+                      <span class="badge badge-soft-warning rounded-pill px-3 py-2">In Progress</span>
+                    </td>
+                    <td class="text-center py-3">
+                      <div class="d-flex justify-content-center">
+                        <img src="https://i.pravatar.cc/150?img=12" class="rounded-circle border border-white"
+                          width="30" style="margin-right: -10px; z-index: 2" />
+                        <img src="https://i.pravatar.cc/150?img=5" class="rounded-circle border border-white" width="30"
+                          style="z-index: 1" />
+                      </div>
+                    </td>
+                    <td class="py-3" style="width: 25%">
+                      <div class="d-flex justify-content-between align-items-center mb-1">
+                        <small class="fw-bold text-muted">65%</small>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar " role="progressbar" style="width: 65%"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- Project 2 -->
+                  <tr>
+                    <td class="py-3 px-0">
+                      <div class="d-flex align-items-center">
+                        <div class="icon-circle bg-light-green" style="width: 40px; height: 40px; font-size: 1rem">
+                          <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <div class="ms-3">
+                          <h6 class="mb-0 fw-bold">E-commerce Portal</h6>
+                          <small class="text-muted">Retail Client</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-center py-3">
+                      <span class="badge badge-soft-success rounded-pill px-3 py-2">Completed</span>
+                    </td>
+                    <td class="text-center py-3">
+                      <div class="d-flex justify-content-center">
+                        <img src="https://i.pravatar.cc/150?img=8" class="rounded-circle border border-white" width="30"
+                          style="margin-right: -10px; z-index: 2" />
+                        <img src="https://i.pravatar.cc/150?img=47" class="rounded-circle border border-white"
+                          width="30" style="z-index: 1" />
+                      </div>
+                    </td>
+                    <td class="py-3">
+                      <div class="d-flex justify-content-between align-items-center mb-1">
+                        <small class="fw-bold text-muted">100%</small>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar bg-pastel-green" role="progressbar" style="width: 100%"></div>
+                      </div>
+                    </td>
+                  </tr>
+                  <!-- Project 3 -->
+                  <tr>
+                    <td class="py-3 px-0">
+                      <div class="d-flex align-items-center">
+                        <div class="icon-circle bg-light-purple" style="width: 40px; height: 40px; font-size: 1rem">
+                          <i class="fa-solid fa-server"></i>
+                        </div>
+                        <div class="ms-3">
+                          <h6 class="mb-0 fw-bold">Cloud Migration</h6>
+                          <small class="text-muted">Tech Client</small>
+                        </div>
+                      </div>
+                    </td>
+                    <td class="text-center py-3">
+                      <span class="badge badge-soft-warning rounded-pill px-3 py-2">In Progress</span>
+                    </td>
+                    <td class="text-center py-3">
+                      <div class="d-flex justify-content-center">
+                        <img src="https://i.pravatar.cc/150?img=33" class="rounded-circle border border-white"
+                          width="30" style="z-index: 1" />
+                      </div>
+                    </td>
+                    <td class="py-3">
+                      <div class="d-flex justify-content-between align-items-center mb-1">
+                        <small class="fw-bold text-muted">40%</small>
+                      </div>
+                      <div class="progress">
+                        <div class="progress-bar" role="progressbar" style="width: 40%"></div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 7. Timeline -->
+      <div class="col-lg-4">
+        <div class="card modern-card h-100 p-4">
+          <h5 class="fw-bold section-title mb-4">Recent Activities</h5>
+          <div class="card-body p-0">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-date">Today, 10:30 AM</div>
+                <div class="timeline-content">
+                  Medical App UI design phase completed by
+                  <span class="fw-bold text-team-primary">Mona</span>.
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">Yesterday, 04:15 PM</div>
+                <div class="timeline-content">
+                  New project kickoff for Cloud Migration. Lead by
+                  <span class="fw-bold text-team-primary">Tarek</span>.
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">Oct 12, 09:00 AM</div>
+                <div class="timeline-content">
+                  Sprint planning meeting held for E-Commerce team.
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-date">Oct 10, 02:20 PM</div>
+                <div class="timeline-content">
+                  <span class="fw-bold text-team-primary">Omar</span> merged
+                  pull request #402 to production.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<button class="chat-btn" onclick="toggleChat()">
+         <i class="fa-solid fa-robot" style="color:#e1b055;"></i>
+ 
+    </button>
+
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <div class="user-info">
+                <div class="avatar">AI</div>
+                <div>
+                    <h4>SkillBridge Assistant</h4>
+                    <small>Online | Ready to help</small>
+                </div>
+            </div>
+            <button class="close-btn" onclick="toggleChat()">&times;</button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                Welcome to SkillBridge! Are you looking for talented graduates or starting your freelance journey?
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type your message here...">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+<script>
+function openMenu() {
+    document.getElementById("sideMenu").classList.add("active");
+    document.getElementById("overlay").classList.add("active");
+  }
+
+  function closeMenu() {
+    document.getElementById("sideMenu").classList.remove("active");
+    document.getElementById("overlay").classList.remove("active");
+
+  }
+/////////////////////////////////
+
+function toggleLanguage() {
+    const html = document.documentElement;
+    const isEn = html.getAttribute('lang') === 'en';
+    
+    if (isEn) {
+        html.setAttribute('lang', 'ar');
+        html.setAttribute('dir', 'rtl');
+        updateContent('ar');
+    } else {
+        html.setAttribute('lang', 'en');
+        html.setAttribute('dir', 'ltr');
+        updateContent('en');
+    }
+}
+
+function updateContent(lang) {
+    const data = {
+        'en': {
+            'find': 'Find Freelancer',
+            'team': 'Team Page',
+            'dash': 'Dashboard',
+            'more': 'More ▾',
+            'signup': 'Sign Up',
+            'login': 'Log In',
+            'langBtn': 'AR',
+            'langToggle': 'Language: English'
+        },
+        'ar': {
+            'find': 'ابحث عن مستقل',
+            'team': 'صفحة الفريق',
+            'dash': 'لوحة التحكم',
+            'more': 'المزيد ▾',
+            'signup': 'إنشاء حساب',
+            'login': 'دخول',
+            'langBtn': 'EN',
+            'langToggle': 'اللغة: العربية'
+        }
+    };
+
+    document.getElementById('link-find').innerText = data[lang].find;
+    document.getElementById('link-team').innerText = data[lang].team;
+    document.getElementById('link-dash').innerText = data[lang].dash;
+    document.getElementById('link-more').innerText = data[lang].more;
+    
+    // أزرار الحساب
+    document.querySelector('.nav-signup-btn').innerText = data[lang].signup;
+    document.querySelector('.side-signup').innerText = data[lang].signup;
+    document.querySelector('.side-login').innerText = data[lang].login;
+
+    // أزرار اللغة
+    document.querySelector('.lang-btn-desktop').innerText = data[lang].langBtn;
+    document.querySelector('.txt-lang-toggle').innerText = data[lang].langToggle;
+    
+    closeMenu();
+}</script>
+<script src="../js/script.js"></script>
+     <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

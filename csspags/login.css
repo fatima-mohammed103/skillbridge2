@@ -1,0 +1,101 @@
+.login{ margin-top: 70px; /* نفس طول الهيدر الثابت عندك */
+    background-color: #fff;
+  }
+
+   .main-login{
+            font-family: 'Segoe UI';
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin-top: 60px;
+        }
+        .login-card {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid #e2e7e2;
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        .brand h2 {
+            color: #075e94;
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        .input-group {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .btn-primary {
+            width: 100%;
+            padding: 12px;
+            background-color: #075e94;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        .btn-primary:hover {
+            background-color: #075e94;
+        }
+        .divider {
+            margin: 25px 0;
+            border-bottom: 1px solid #e0e0e0;
+            line-height: 0.1em;
+        }
+        .divider span {
+            background: #fff;
+            padding: 0 10px;
+            color: #666;
+            font-size: 14px;
+        }
+        .btn-social {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 12px;
+            border: 2px solid #075e94;
+            background: white;
+            border-radius: 25px;
+            cursor: pointer;
+            color: #007bff;
+            font-weight: 600;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+        .btn-social:hover {
+            background-color: #f0f7ff;
+        }
+        .footer-links {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #666;
+        }
+        .footer-links a {
+            color: #075e94;
+            text-decoration: none;
+            font-weight: 600;
+        }

@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkillBridge</title>
+
+  <link rel="stylesheet" href="../csspags/style.css">
+  <link rel="stylesheet" href="../csspags/loction.css">
+  <script src="https://kit.fontawesome.com/ca825dfbdd.js" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+ 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <style>
+      
+
+    </style>
+
+</head>
+
+<body>
+<div class="parent-container">
+
+ 
+<nav class="main-nav">
+  <div class="nav-container">
+      
+    <div class="nav-left">
+      <button class="menu-btn" onclick="openMenu()">☰</button>
+ <a href="../index.html" class="brand"><img src="/imags/download.png" alt="" style="width: 210px;"></a>
+        
+
+    <ul class="nav-links">
+      <li><a href="#freelancers"id="">Find Freelancer</a></li>
+      <li><a href="/pageshtml/create.html">Explore Projects</a></li>
+      <li><a href="/pageshtml/dashbord.html">Dashborad</a></li>
+      <li class="dropdown">
+        <a href="#" id="link-more" >More ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="/pageshtml/profile.html">Profile</a></li>
+          <li><a href="/pageshtml/ranking.html">Ranking</a></li>
+          <li><a href="/pageshtml/pageteam.html"> Team Page</a></li>
+          <li><a href="/pageshtml/loction.html">Loction</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div> 
+    <div class="nav-right">
+      <!-- <div class="search-box">
+        <input type="search" placeholder="Search a talent..." class="search-input" />
+        <button class="search-icon">🔍</button>
+      </div>
+       -->
+    <button class="lang-btn lang-btn-desktop" onclick="toggleLanguage()">AR</button>
+<!-- 
+      <div class="auth-buttons">
+        <a class="login">Log In</a> -->
+        
+        <a class="nav-signup-btn" href="signup.html">Sign Up</a>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+
+
+  <div id="overlay" onclick="closeMenu()"></div>
+
+  <div id="sideMenu">
+    <div class="side-header">
+      <a href="../index.html" class="side-brand">
+        <img src="/imags/download.png" alt="Logo">
+      </a>
+      <button class="close-btn" onclick="closeMenu()"><i class="fa-solid fa-x" style="color: #075e94;"></i></button>
+    </div>
+    
+    <div class="side-links">
+      <a href="#freelancers"><i class="fa-solid fa-magnifying-glass" style="font-size: 15px;"></i> <span class="txt-find">Find Freelancer</span></a>
+      <a href="/pageshtml/profile.html"><i class="fa-solid fa-briefcase"style="font-size: 15px;" ></i> <span class="txt-work">Profile</span></a>
+      <a href="/pageshtml/create.html"><i class="fa-solid fa-users" style="font-size: 15px;"></i> <span class="txt-team">Explore Projects</span></a></a>
+      <a href="/pageshtml/pageteam.html"><i class="fa-solid fa-users" style="font-size: 15px;"></i> <span class="txt-team">Team Page</span></a>
+      <a href="/pageshtml/dashbord.html"><i class="fas fa-chart-line"></i><span class="txt-team">Dashborad</span></a>
+      <a href="/pageshtml/ranking.html"> <i class="fas fa-podium"></i><span class="txt-team">Ranking</span></a>
+      <a href="/pageshtml/loction.html"><i class="fas fa-map-marked-alt"></i><span class="txt-team">Loction</span></a>
+      <hr>
+      <a href="#" class="lang-btn" onclick="toggleLanguage()">
+        <i class="fa-solid fa-globe" style="font-size: 15px;"></i> <span class="txt-lang-toggle">Language: English</span>
+      </a>
+    </div>
+
+    <div class="side-auth">
+      <a href="#" class="side-login">Log In</a>
+      <a href="#" class="side-signup" style="color: white;">Sign Up</a>
+    </div>
+  </div>
+</div> 
+
+   <section class="location-section">
+  <div class="container-fluid p-0">
+    <div class="row g-0">
+      
+      <div class="col-md-4 col-lg-2 side-panel p-3 border-end shadow-sm">
+        <h6 class="fw-bold mb-4 mt-2 d-flex align-items-center">
+          <i class="fa-solid fa-magnifying-glass me-2 text-primary"></i> 
+          <span>Explore Talent</span>
+        </h6>
+        
+        <div class="search-filters">
+          <div class="input-group input-group-sm mb-3">
+            <span class="input-group-text bg-light border-end-0">
+              <i class="fa-solid fa-location-dot text-primary"></i>
+            </span>
+            <input type="text" class="form-control border-start-0 bg-light" placeholder="Location: Cairo">
+          </div>
+          
+          <select id="skillFilter" class="form-select form-select-sm mb-4 bg-light" onchange="filterDevelopers()">
+            <option value="all">All Skills</option>
+            <option value="Frontend">Frontend</option>
+            <option value="Backend">Backend</option>
+            <option value="Fullstack">Fullstack</option>
+          </select>
+        </div>
+
+        <hr class="opacity-10">
+
+        <div id="devList" class="custom-scrollbar" style="max-height: calc(100vh - 300px); overflow-y: auto;">
+          </div>
+      </div>
+
+      <div class="col-md-9 col-lg-10">
+        <div id="map" style="height: calc(100vh - 70px); width: 100%;"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+<button class="chat-btn" onclick="toggleChat()">
+         <i class="fa-solid fa-robot" style="color:#e1b055;"></i>
+       
+    </button>
+
+    <div class="chat-container" id="chatContainer">
+        <div class="chat-header">
+            <div class="user-info">
+                <div class="avatar">AI</div>
+                <div>
+                    <h4>SkillBridge Assistant</h4>
+                    <small>Online | Ready to help</small>
+                </div>
+            </div>
+            <button class="close-btn" onclick="toggleChat()">&times;</button>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot">
+                Welcome to SkillBridge! Are you looking for talented graduates or starting your freelance journey?
+            </div>
+        </div>
+
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type your message here...">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+<script>
+    // 1. بيانات تجريبية للمطورين (يمكن استبدالها لاحقاً ببيانات من الـ Database)
+    const developers = [
+        { id: 1, name: "عمر خالد", skill: "Frontend", lat: 30.0444, lng: 31.2357, dist: "0.5 كم" },
+        { id: 2, name: "ليلى أحمد", skill: "Backend", lat: 30.0500, lng: 31.2400, dist: "1.2 كم" },
+        { id: 3, name: "ياسين علي", skill: "Frontend", lat: 30.0600, lng: 31.2200, dist: "2.5 كم" },
+        { id: 4, name: "مريم محمود", skill: "Fullstack", lat: 30.0300, lng: 31.2500, dist: "3.0 كم" }
+    ];
+
+    // 2. إعداد الخريطة
+    var map = L.map('map').setView([30.0444, 31.2357], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap'
+    }).addTo(map);
+
+    var markers = {};
+
+    // 3. وظيفة عرض المطورين في القائمة وعلى الخريطة
+    function displayDevelopers(data) {
+        const listContainer = document.getElementById('devList');
+        listContainer.innerHTML = ''; // مسح القائمة الحالية
+
+        // مسح الماركرز القديمة من الخريطة
+        for (let id in markers) {
+            map.removeLayer(markers[id]);
+        }
+        markers = {};
+
+        data.forEach(dev => {
+            // إضافة البطاقة للقائمة
+            const card = `
+                <div class="card dev-card p-3" id="card-${dev.id}" onclick="focusOnDev(${dev.id}, ${dev.lat}, ${dev.lng})">
+                    <div class="d-flex align-items-center">
+                        <div class="bg-light rounded-circle me-3 d-flex align-items-center justify-content-center" style="width:50px; height:50px;">
+                            <i class="bi bi-person-fill text-secondary fs-4"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <h6 class="mb-0 fw-bold">${dev.name}</h6>
+                            <small class="text-muted"><i class="bi bi-geo-alt-fill me-1"></i>${dev.dist}</small>
+                            <div class="mt-2">
+                                <span class="skill-badge">${dev.skill}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            listContainer.innerHTML += card;
+
+            // إضافة الماركر للخريطة
+            const marker = L.marker([dev.lat, dev.lng]).addTo(map)
+                .bindPopup(`<b>${dev.name}</b><br>${dev.skill}`);
+            markers[dev.id] = marker;
+        });
+    }
+
+    // 4. وظيفة الفلترة بناءً على الاختيار
+    function filterDevelopers() {
+        const selectedSkill = document.getElementById('skillFilter').value;
+        const filtered = selectedSkill === 'all' 
+            ? developers 
+            : developers.filter(d => d.skill === selectedSkill);
+        
+        displayDevelopers(filtered);
+    }
+
+    // 5. وظيفة التركيز على المطور عند الضغط عليه
+    function focusOnDev(id, lat, lng) {
+        // إزالة الـ Active من كل البطاقات
+        document.querySelectorAll('.dev-card').forEach(c => c.classList.remove('active'));
+        // إضافة Active للبطاقة المختارة
+        document.getElementById(`card-${id}`).classList.add('active');
+        
+        // تحريك الخريطة وفتح النافذة المنبثقة
+        map.flyTo([lat, lng], 15);
+        markers[id].openPopup();
+    }
+
+    // تشغيل العرض الأولي
+    displayDevelopers(developers);
+
+</script>
+<script src="../js/script.js"></script>
+</body>
+</html>
+
