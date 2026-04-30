@@ -10,9 +10,41 @@
     document.getElementById("overlay").classList.remove("active");
 
   }
+/////footer
 
 
+document.querySelectorAll('.column h4').forEach(header => {
+            header.addEventListener('click', () => {
+                if (window.innerWidth <= 600) {
+                    const parent = header.parentElement;
+                    // غلق القوائم الأخرى
+                    document.querySelectorAll('.column').forEach(col => {
+                        if (col !== parent) col.classList.remove('active');
+                    });
+                    // فتح/غلق الحالية
+                    parent.classList.toggle('active');
+                }
+            });
+        });
 
+        // دوال الشات
+        function toggleChat() {
+            const chat = document.getElementById('chatContainer');
+            chat.style.display = (chat.style.display === 'flex') ? 'none' : 'flex';
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const chatMessages = document.getElementById('chatMessages');
+            if (input.value.trim() !== "") {
+                const msg = document.createElement('div');
+                msg.className = 'message user';
+                msg.innerText = input.value;
+                chatMessages.appendChild(msg);
+                input.value = "";
+                chatMessages.scrollTop = chatMessages.scrollHeight;
+            }
+        }
 
 
 

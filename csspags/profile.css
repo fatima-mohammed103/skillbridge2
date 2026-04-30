@@ -181,3 +181,4 @@
             .profile-header { flex-direction: column; text-align: center; }
             .project-card{ grid-template-columns: repeat(2, 1fr);}
         }
+        

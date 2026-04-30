@@ -345,7 +345,25 @@ display: none;
   .brand { font-size: 18px; }
   .brand span { font-size: 22px; }
   .nav-right { gap: 10px; }
+  .search-box{display: none;}
+  .languge{display: none;}
 }
+
+@media (max-width: 430px) {
+ 
+  .search-box{display: none;}
+  .languge{display: none;}
+.signbut{width:80px ;
+  font-size: 13px;
+  height: 50px;
+}
+.nav-left {gap: 1px;}
+.nav-left img {width: 160px;}
+
+  .brand span { font-size: 22px; }
+  .nav-right { gap:10px; }
+}
+
 
 /* sign up */
 

@@ -370,8 +370,8 @@ display: none;
   font-size: 13px;
   height: 50px;
 }
-.nav-left {gap: 1px;}
-.nav-left img {width: 160px;}
+.nav-left {gap:.5px;}
+.nav-left img {width: 100px;}
 
   .brand span { font-size: 22px; }
   .nav-right { gap:10px; }
@@ -477,7 +477,7 @@ display: none;
     }
 
     .hero-text {
-        /* Fluid Typography: الخط يصغر ويكبر تلقائياً */
+        
         font-size: calc(1.2rem + 1.2vw);
         font-weight: 600;
         color:var(--maincolor);
@@ -492,7 +492,6 @@ display: none;
         display: inline-block;
     }
 
-    /* خط جمالي بسيط تحت الكلمة */
     .highlight::after {
         content: '';
         position: absolute;
@@ -514,18 +513,18 @@ display: none;
         opacity: 0.7;
     }
 
-    /* تحسينات للشاشات الصغيرة جداً */
+    
     @media (max-width: 576px) {
         .hero-text {
-            font-size: 1.5rem; /* حجم ثابت ومريح للموبايل */
+            font-size: 1.5rem; 
             padding: 0 10px;
         }
     }
 
-    /* تحسينات للشاشات الكبيرة */
+    
     @media (min-width: 1200px) {
         .hero-text {
-            font-size: 2.5rem; /* حجم فخم للشاشات الكبيرة */
+            font-size: 2.5rem; 
         }}
 
 
@@ -538,6 +537,9 @@ display: none;
 html{
     scroll-behavior: smooth;
 }
+.freelancer-section{display: flex;
+align-items: center;
+justify-content: center;}
 .container{
     margin-top: 5%;
     
@@ -686,14 +688,6 @@ h3{
   
     transition: .3s ease-in;
 }
-/* @keyframes move{
-    from{
-        transform: translateY(100%);
-    }
-    to{
-         transform: translateY(0);
-    }
-} */
 
 /* IMG_1 */
 #photo_2 a{
@@ -728,100 +722,197 @@ margin-top: 0;
 
 
 /* ================= FOOTER ================= */
-/* Footer */
-.foot {
-  height: 500px;
-  width: 98%;
-  border-radius: 12px;
+
+
+.footer{ width: 98%;
   background: #121212;
-  color: #ccc;
-  padding: 40px 20px;
-  margin: auto;
+        border-radius: 12px;
+        margin:  auto;
 }
+.foot {
+            min-height: 400px;
+            height: auto;
+           
+           
+            border-radius: 12px;
+          
+            color: #ccc;
+            padding: 40px 30px;
+            margin: 20px auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+        }
+
+        .column h4 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .column ul {
+            list-style: none;
+            padding: 0;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .column ul li {
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 0.95rem;
+        }
+
+        .column ul li:hover {
+            color: #e1b055;
+        }
+
+      
+        .social {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .icons { display: flex; gap: 15px; }
+        .icons i {
+            background: #222;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 14px;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 35px; height: 35px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .icons i:hover { background: #e1b055; color: #121212; }
+
+        .bottom {
+            margin-top: 20px;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        
+        .chat-btn {
+            position: fixed;
+            bottom: 30px; right: 30px;
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            background: #121212;
+            border: 2px solid #e1b055;
+            cursor: pointer; z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .chat-container {
+            position: fixed;
+            bottom: 100px; right: 30px;
+            width: 350px; max-width: 85vw;
+            height: 450px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            display: none;
+            flex-direction: column;
+            z-index: 1001;
+            overflow: hidden;
+        }
+
+        .chat-header {
+            background: #121212; color: white;
+            padding: 15px; display: flex;
+            justify-content: space-between; align-items: center;
+        }
+
+        .chat-messages { flex: 1; padding: 15px; overflow-y: auto; background: #f9f9f9; display: flex; flex-direction: column; }
+        .message { padding: 10px 15px; border-radius: 10px; margin-bottom: 10px; font-size: 0.9rem; max-width: 80%; }
+        .bot { background: #eee; color: #333; align-self: flex-start; }
+        .user { background: #121212; color: #fff; align-self: flex-end; }
+
+        .chat-input { padding: 10px; border-top: 1px solid #eee; display: flex; gap: 5px; }
+        .chat-input input { flex: 1; border: 1px solid #ddd; padding: 8px; border-radius: 20px; outline: none; }
+        .chat-input button { background: #e1b055; border: none; width: 35px; height: 35px; border-radius: 50%; color: white; cursor: pointer; }
+
+        /* --- Media Queries (Accordion Logic) --- */
+        @media (max-width: 992px) {
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        @media (max-width: 600px) {
+            .footer-grid { grid-template-columns: 1fr; gap: 0; }
+            
+            .column h4 {
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 15px 0;
+                border-bottom: 1px solid #333;
+                margin-bottom: 0;
+            }
+
+            .column h4::after {
+                content: '\2b'; /* علامة + */
+                font-family: monospace;
+                font-size: 18px;
+            }
+
+            .column.active h4::after {
+                content: '\2212'; /* علامة - */
+            }
+
+            .column ul {
+                max-height: 0;
+                overflow: hidden;
+                margin-bottom: 0;
+            }
+
+            .column.active ul {
+                max-height: 500px;
+                padding: 15px 0;
+            }
+
+            .social, .bottom { flex-direction: column; gap: 15px; text-align: center; }
+            .icons { justify-content: center; }
+            .chat-container { right: 10px; bottom: 80px; }
+        }
 
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-}
-
-.column h4 {
-  color: #fff;
-  margin-bottom: 15px;
-}
-
-.column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.column ul li {
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.column ul li:hover {
-  color: #fff;
-}
-
-.social {
-  margin-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.icons i {
-  margin-right: 10px;
-  background: #222;
-  padding: 8px;
-  border-radius: 50%;
-  font-size: 12px;
-}
-
-.bottom {
-  margin-top: 30px;
-  border-top: 1px solid #333;
-  padding-top: 20px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.links span {
-  margin-left: 15px;
-  cursor: pointer;
-}
-
-@media (max-width: 992px) {
-  .footer-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 600px) {
-  .footer-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.social {
-  flex-direction: column;
-  gap: 10px;
-}
-
-.bottom {
-  flex-direction: column;
-  gap: 10px;
-  text-align: center;
-}
 
 
 
 
-/*  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* style.css */

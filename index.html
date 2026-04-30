@@ -63,7 +63,7 @@
   <div id="sideMenu">
     <div class="side-header">
       <a href="index.html" class="side-brand">
-        <img src="imags/download.png" alt="Logo">
+        <img src="imags/skill.png" alt="Logo">
       </a>
       <button class="close-btn" onclick="closeMenu()"><i class="fa-solid fa-x" style="color: #075e94;"></i></button>
     </div>
@@ -212,7 +212,7 @@
     
 <!--  -->
 
-
+<section class="freelancer-section">
 
     <div class="container " id="freelancers">
         
@@ -625,6 +625,7 @@
 
 
         </section>
+        </section>
       
         
 
@@ -658,93 +659,86 @@
 
 
     <!-- Footer -->
-    <footer class="footer mt-4 d-flex justify-content-center" style="width: 100%;">
-      <div class="foot">
-        <div class="footer-grid">
-          <div class="column">
-            <h4>For Clients</h4>
-            <ul>
-              <li>How to hire</li>
-              <li>Talent Marketplace</li>
-              <li>Project Catalog</li>
-              <li>Hire an agency</li>
-              <li>Enterprise</li>
-              <li>Business Plus</li>
-              <li>Any Hire</li>
-            </ul>
-          </div>
-          <div class="column">
-            <h4>For Talent</h4>
-            <ul>
-              <li>How to find work</li>
-              <li>Direct Contracts</li>
-              <li>Find jobs worldwide</li>
-              <li>Win work with ads</li>
-            </ul>
-          </div>
-          <div class="column">
-            <h4>Resources</h4>
-            <ul>
-              <li>Help & support</li>
-              <li>Success stories</li>
-              <li>Blog</li>
-              <li>Affiliate programme</li>
-            </ul>
-          </div>
-          <div class="column">
-            <h4>Company</h4>
-            <ul>
-              <li class="highlight">About us</li>
-              <li class="highlight">Leadership</li>
-              <li class="highlight">Careers</li>
-              <li class="highlight">Press</li>
-            </ul>
-          </div>
+    <footer class="footer">
+        <div class="foot">
+            <div class="footer-grid">
+                <div class="column">
+                    <h4>For Clients</h4>
+                    <ul>
+                        <li>How to hire</li>
+                        <li>Talent Marketplace</li>
+                        <li>Project Catalog</li>
+                        <li>Hire an agency</li>
+                        <li>Enterprise</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h4>For Talent</h4>
+                    <ul>
+                        <li>How to find work</li>
+                        <li>Direct Contracts</li>
+                        <li>Find jobs worldwide</li>
+                        <li>Win work with ads</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li>Help & support</li>
+                        <li>Success stories</li>
+                        <li>Blog</li>
+                        <li>Affiliate programme</li>
+                    </ul>
+                </div>
+                <div class="column">
+                    <h4>Company</h4>
+                    <ul>
+                        <li>About us</li>
+                        <li>Leadership</li>
+                        <li>Careers</li>
+                        <li>Press</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="social">
+                <span>Follow us</span>
+                <div class="icons">
+                    <i class="fab fa-facebook-f"></i>
+                    <i class="fab fa-linkedin-in"></i>
+                    <i class="fab fa-x-twitter"></i>
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </div>
+
+            <div class="bottom">
+                <p>&copy; 2020 - 2026 SkillBridge</p>
+                <div>
+                    <span class="me-3">Terms of Service</span>
+                    <span>Privacy Policy</span>
+                </div>
+            </div>
         </div>
-        <div class="social"> <span>Follow us</span>
-          <div class="icons"> <i>F</i> <i>in</i> <i>X</i> <i>YT</i> </div>
-        </div>
-        <div class="bottom">
-          <p> 2020 - 2026 SkillBridge </p>
-        </div>
-      </div>
     </footer>
 
-    <!-- Chat -->
-
-
-
-
-<button class="chat-btn" onclick="toggleChat()">
-         <i class="fa-solid fa-robot" style="color:#e1b055;"></i>
+    <!-- Chat Interface -->
+    <button class="chat-btn" onclick="toggleChat()">
+        <i class="fa-solid fa-robot" style="color:#e1b055;"></i>
     </button>
 
     <div class="chat-container" id="chatContainer">
         <div class="chat-header">
-            <div class="user-info">
-                <div class="avatar">AI</div>
-                <div>
-                    <h4>SkillBridge Assistant</h4>
-                    <small>Online | Ready to help</small>
-                </div>
-            </div>
-            <button class="close-btn" onclick="toggleChat()">&times;</button>
+            <span>SkillBridge Assistant</span>
+            <button class="btn btn-sm text-white" onclick="toggleChat()">&times;</button>
         </div>
-
         <div class="chat-messages" id="chatMessages">
-            <div class="message bot">
-                Welcome to SkillBridge! Are you looking for talented graduates or starting your freelance journey?
-            </div>
+            <div class="message bot">  Welcome to SkillBridge! Are you looking for talented graduates or starting your freelance journey?</div>
         </div>
-
         <div class="chat-input">
-            <input type="text" id="userInput" placeholder="Type your message here...">
-            <button onclick="sendMessage()"><i class="fas fa-paper-plane" style="font-size: 10px;"></i></button>
+            <input type="text" id="userInput" placeholder="اكتب رسالتك هنا...">
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
         </div>
     </div>
-
-
-
 
 
 
