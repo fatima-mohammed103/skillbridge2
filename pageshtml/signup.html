@@ -14,11 +14,6 @@
 <link rel="stylesheet" href="../csspags/style.css">
 
 
- 
-
-
-
-
 </head>
 <body>
      <!-- satart of Header -->
@@ -104,35 +99,13 @@
 
   <!-- End of Header -->
 <section class="signup">
-
- <div class="main-container">
-        
-
-
-
-
-
-
-
-
-
-  
     
-</div>
-</section>
-
-
-
-
-
-
-
-<!-- القسم الأول: اختيار النوع
-    <div id="selectionArea" class="custom-card text-center">
-        <h1 class="fw-bold mb-2">Join <span style="color: var(--primary-blue);">SKILLBRIDGE</span></h1>
+    <div class="sign-container" id="selectionArea">
+        <h1 class="fw-bold mb-2 mt-4">Join <span style="color: var(--maincolor);">SKILLBRIDGE</span></h1>
         <p class="text-muted mb-5">Connecting fresh talent with the professional world</p>
 
-        <div class="row g-4">
+        
+        <div class="row g-7 colrow">
             <div class="col-md-4">
                 <div class="choice-box" onclick="showForm('Freelancer')">
                     <img src="../imags/Screenshot 2026-04-24 031004.png" alt="Freelancer">
@@ -140,51 +113,62 @@
                     <p class="small text-muted">Start your career with the best entry-level roles</p>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="choice-box" onclick="showForm('Client')">
-                    <img src="../imags/Screenshot 2026-04-24 031215.png" alt="Client" style="width: 250px;">
+                    <img src="../imags/Screenshot 2026-04-24 031215.png" alt="Client">
                     <h3 class="h5 fw-bold">Client</h3>
                     <p class="small text-muted">Hire exceptional fresh talent and build your team</p>
                 </div>
             </div>
         </div>
 
+        
         <div class="mt-4">
             Already have an account? <a href="login.html" class="text-decoration-none fw-bold" style="color: var(--primary-blue);">Login</a>
         </div>
     </div>
 
-    <!-- القسم الثاني: الفورم (مخفي) -->
+   
     <div id="formArea" class="custom-card hidden animate__animated animate__fadeIn">
-        <div class="text-center mb-4">
-            <h4 id="displayRole" class="fw-bold" style="color: var(--primary-blue);">Join as Freelancer</h4>
-            <p class="text-muted">Create your account to get started</p>
+        <div class="form">
+    <div class="text-center mb-4">
+        <h2 id="displayRole" class="fw-bold">Join as Freelancer</h2>
+        <span class="text-muted">Create your account to get started</span>
+    </div>
+
+    <form id="signupForm">
+    
+        <div class="input-group-custom">
+            <input type="text" placeholder="Full Name" required>
+            <i class="fa-solid fa-user"></i>
         </div>
 
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <form id="signupForm">
-                    <div class="input-group-custom d-flex align-items-center">
-                        <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Full Name" required>
-                    </div>
-                    <div class="input-group-custom d-flex align-items-center">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="email" placeholder="E-mail" required>
-                    </div>
-                    <div class="input-group-custom d-flex align-items-center">
-                        <i class="fa-solid fa-lock"></i>
-                        <input type="password" placeholder="Password" minlength="8" required>
-                    </div>
-
-                    <div class="text-center mt-4">
-                        <button type="submit" class="btn-submit w-100 mb-3">Sign Up</button>
-                        <span class="back-btn" onclick="toggleView()"><i class="fa-solid fa-arrow-left"></i> Back to selection</span>
-                    </div>
-                </form>
-            </div>
+        <div class="input-group-custom">
+            <input type="email" placeholder="E-mail" required>
+            <i class="fa-solid fa-envelope"></i>
         </div>
-    </div> -->
+
+      
+        <div class="input-group-custom">
+            <input type="password" placeholder="Password" minlength="5" required>
+            <i class="fa-solid fa-lock"></i>
+        </div>
+
+        <div class="text-center mt-4">
+            <button type="submit" class="divbut">Sign Up</button>
+            <br>
+            <span class="back-btn" onclick="goBack()" style="cursor:pointer;">
+                <i class="fa-solid fa-arrow-left"></i> Back to selection
+            </span>
+        </div>
+    </form>
+</div>
+    </div>
+    
+</section>
+
+
+
 
 
 
@@ -294,6 +278,7 @@ function updateContent(lang) {
     
     closeMenu();
 }</script>
+
 <script src="../js/script.js"></script>
      <script src="js/bootstrap.bundle.min.js"></script>
 </body>

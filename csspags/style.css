@@ -19,11 +19,14 @@
 /* :root{--maincolor:#0d4c6f;} */
 /* :root{--maincolor:#016fb9;} */
 /* :root{--maincolor:#3f44b6;} */
+/* :root{--maincolor:#154462;} */
+/* :root{--maincolor:;} */
+
 
  :root{--maincolor:#2c3e50; } 
 
-:root{--color2:#e1b055} *
-html[lang="ar"] body {
+:root{--color2:#e1b055} 
+*html[lang="ar"] body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -336,7 +339,7 @@ display: none;
 
 /* =========== التجاوب (Responsive) للموبايل =========== */
 @media (max-width: 992px) {
-  
+ .nav-signup-btn{width: 110px;} 
   .nav-links { display: none; }
   .menu-btn { display: block; }
 

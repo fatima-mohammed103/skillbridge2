@@ -1,18 +1,17 @@
+function showForm(userType) {
+    // إخفاء منطقة الاختيار (تأكد من كتابة الاسم الصحيح)
+    document.getElementById('selectionArea').classList.add('hidden');
+    
+    // إظهار منطقة النموذج
+    const formContainer = document.getElementById('formArea');
+    formContainer.classList.remove('hidden');
+    
+    // تغيير النص (تأكد من استخدام displayRole)
+    document.getElementById('displayRole').innerText = 'Join as a ' + userType;
+}
 
-    function showForm(userType) {
-        // إخفاء صفحة الاختيار
-        document.getElementById('selectionContainer').classList.add('hidden');
-        
-        // إظهار صفحة الفورم
-        const formContainer = document.getElementById('formContainer');
-        formContainer.classList.remove('hidden');
-        
-        // تغيير العنوان بناءً على الاختيار
-        document.getElementById('formTitle').innerText = 'Join as a ' + userType;
-    }
-
-    function goBack() {
-        // العودة للصفحة السابقة
-        document.getElementById('formContainer').classList.add('hidden');
-        document.getElementById('selectionContainer').classList.remove('hidden');
-    }
+function goBack() {
+    // إخفاء النموذج وإظهار الاختيارات
+    document.getElementById('idform').classList.add('hidden');
+    document.getElementById('selectionArea').classList.remove('hidden');
+}

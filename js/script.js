@@ -1,31 +1,4 @@
-// const toggle = document.getElementById("menuToggle");
-// const navLinks = document.getElementById("navLinks");
-// const navRight = document.querySelector(".nav-right");
 
-// toggle.addEventListener("click", () => {
-//   navLinks.classList.toggle("active");
-//   navRight.classList.toggle("active");
-// });
-
-// MENU
-// function openMenu() {
-//   sideMenu.classList.add("active");
-//   overlay.classList.add("active");
-// }
-
-// function closeMenu() {
-//   sideMenu.classList.remove("active");
-//   overlay.classList.remove("active");
-// }
-
-// // SEARCH
-// function openSearch() {
-//   searchPopup.classList.add("active");
-// }
-
-// function closeSearch() {
-//   searchPopup.classList.remove("active");
-// }
 
   function openMenu() {
     document.getElementById("sideMenu").classList.add("active");
@@ -43,17 +16,6 @@
 
 
 
-
-function openMenu() {
-    document.getElementById("sideMenu").classList.add("active");
-    document.getElementById("overlay").classList.add("active");
-  }
-
-  function closeMenu() {
-    document.getElementById("sideMenu").classList.remove("active");
-    document.getElementById("overlay").classList.remove("active");
-
-  }
 /////////////////////////////////
 
 function toggleLanguage() {
@@ -299,8 +261,9 @@ function login(event) {
         alert('Form Submitted Successfully!');
     });
 
+////////sign up
 
 
-
+ 
 
 

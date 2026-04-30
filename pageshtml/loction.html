@@ -56,9 +56,7 @@
       </div>
        -->
     <button class="lang-btn lang-btn-desktop" onclick="toggleLanguage()">AR</button>
-<!-- 
-      <div class="auth-buttons">
-        <a class="login">Log In</a> -->
+     
         
         <a class="nav-signup-btn" href="signup.html">Sign Up</a>
       </div>
@@ -177,7 +175,7 @@
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
-    // 1. بيانات تجريبية للمطورين (يمكن استبدالها لاحقاً ببيانات من الـ Database)
+   
     const developers = [
         { id: 1, name: "عمر خالد", skill: "Frontend", lat: 30.0444, lng: 31.2357, dist: "0.5 كم" },
         { id: 2, name: "ليلى أحمد", skill: "Backend", lat: 30.0500, lng: 31.2400, dist: "1.2 كم" },
@@ -185,7 +183,7 @@
         { id: 4, name: "مريم محمود", skill: "Fullstack", lat: 30.0300, lng: 31.2500, dist: "3.0 كم" }
     ];
 
-    // 2. إعداد الخريطة
+    
     var map = L.map('map').setView([30.0444, 31.2357], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '© OpenStreetMap'
@@ -193,19 +191,17 @@
 
     var markers = {};
 
-    // 3. وظيفة عرض المطورين في القائمة وعلى الخريطة
     function displayDevelopers(data) {
         const listContainer = document.getElementById('devList');
-        listContainer.innerHTML = ''; // مسح القائمة الحالية
+        listContainer.innerHTML = ''; 
 
-        // مسح الماركرز القديمة من الخريطة
         for (let id in markers) {
             map.removeLayer(markers[id]);
         }
         markers = {};
 
         data.forEach(dev => {
-            // إضافة البطاقة للقائمة
+          
             const card = `
                 <div class="card dev-card p-3" id="card-${dev.id}" onclick="focusOnDev(${dev.id}, ${dev.lat}, ${dev.lng})">
                     <div class="d-flex align-items-center">
@@ -224,14 +220,12 @@
             `;
             listContainer.innerHTML += card;
 
-            // إضافة الماركر للخريطة
             const marker = L.marker([dev.lat, dev.lng]).addTo(map)
                 .bindPopup(`<b>${dev.name}</b><br>${dev.skill}`);
             markers[dev.id] = marker;
         });
     }
 
-    // 4. وظيفة الفلترة بناءً على الاختيار
     function filterDevelopers() {
         const selectedSkill = document.getElementById('skillFilter').value;
         const filtered = selectedSkill === 'all' 
@@ -241,20 +235,29 @@
         displayDevelopers(filtered);
     }
 
-    // 5. وظيفة التركيز على المطور عند الضغط عليه
     function focusOnDev(id, lat, lng) {
-        // إزالة الـ Active من كل البطاقات
+
         document.querySelectorAll('.dev-card').forEach(c => c.classList.remove('active'));
-        // إضافة Active للبطاقة المختارة
+       
         document.getElementById(`card-${id}`).classList.add('active');
         
-        // تحريك الخريطة وفتح النافذة المنبثقة
         map.flyTo([lat, lng], 15);
         markers[id].openPopup();
     }
 
-    // تشغيل العرض الأولي
     displayDevelopers(developers);
+    
+
+function openMenu() {
+    document.getElementById("sideMenu").classList.add("active");
+    document.getElementById("overlay").classList.add("active");
+  }
+
+  function closeMenu() {
+    document.getElementById("sideMenu").classList.remove("active");
+    document.getElementById("overlay").classList.remove("active");
+
+  }
 
 </script>
 <script src="../js/script.js"></script>
