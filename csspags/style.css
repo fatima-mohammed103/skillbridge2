@@ -295,9 +295,7 @@ html[lang="ar"] #sideMenu {
   left: auto;
   right: -280px;
 }
-#sideMenu.active {
-  left: 0;
-}
+
 
 #sideMenu a {
   color:var(--maincolor);

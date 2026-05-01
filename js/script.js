@@ -48,7 +48,7 @@ document.querySelectorAll('.column h4').forEach(header => {
 
 
 
-/////////////////////////////////
+/////////////////////////////////language
 
 function toggleLanguage() {
     const html = document.documentElement;
@@ -89,22 +89,19 @@ function updateContent(lang) {
         }
     };
 
-    // تحديث النصوص
     document.getElementById('link-find').innerText = data[lang].find;
     document.getElementById('link-team').innerText = data[lang].team;
     document.getElementById('link-dash').innerText = data[lang].dash;
     document.getElementById('link-more').innerText = data[lang].more;
-    
-    // أزرار الحساب
+
     document.querySelector('.nav-signup-btn').innerText = data[lang].signup;
     document.querySelector('.side-signup').innerText = data[lang].signup;
     document.querySelector('.side-login').innerText = data[lang].login;
 
-    // أزرار اللغة
     document.querySelector('.lang-btn-desktop').innerText = data[lang].langBtn;
     document.querySelector('.txt-lang-toggle').innerText = data[lang].langToggle;
     
-    // إغلاق القائمة بعد التحويل
+    
     closeMenu();
 }
 
@@ -123,7 +120,7 @@ function updateContent(lang) {
 
 
 
-/////////////////////////////////////////
+/////////////////////////////////////////freelancer
 
 
   function showImg(event){
@@ -270,10 +267,10 @@ function login(event) {
 
 
 
-// /////
+// ///// form
 
     function showForm(role) {
-        // تغيير النص في العنوان بناءً على الاختيار
+        
         document.getElementById('displayRole').innerText = "Join as " + role;
         toggleView();
     }
@@ -282,18 +279,33 @@ function login(event) {
         const selection = document.getElementById('selectionArea');
         const form = document.getElementById('formArea');
 
-        // تبديل الكلاس المخفي
+        
         selection.classList.toggle('hidden');
         form.classList.toggle('hidden');
     }
 
-    // منع الفورم من عمل Refresh للصفحة عند الإرسال (للتجربة)
+   
     document.getElementById('signupForm').addEventListener('submit', function(e) {
         e.preventDefault();
         alert('Form Submitted Successfully!');
     });
 
-////////sign up
+////////// map
+var map = L.map('map').setView([30.0444, 31.2357], 13);
+
+        // إضافة طبقة الخريطة من OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+
+        // إضافة علامة (Marker) في موقع الشركة
+        var marker = L.marker([30.0444, 31.2357]).addTo(map);
+        marker.bindPopup("<b>مقرنا الرئيسي</b><br>أهلاً بك في شركتنا.").openPopup();
+
+        // لضمان استجابة الخريطة عند تغيير حجم الشاشة
+        window.addEventListener('resize', function() {
+            map.invalidateSize();
+        });
 
 
  
